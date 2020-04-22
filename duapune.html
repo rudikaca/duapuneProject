@@ -4,16 +4,17 @@
     <title>duapune.com</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./libs/bootstrap.min.css">
+    <script src="./libs/jquery.min.js"></script>
+    <script src="./libs/popper.min.js"></script>
+    <script src="./libs/bootstrap.min.js"></script>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-sm  navbar-dark">
     <!-- Brand -->
-    <a class="navbar-brand text-dark" href="#">duapune.com</a>
+    <a class="navbar-brand text-dark" href="#">
+        ♚ duapune.com</a>
 
     <!-- Links -->
     <ul class="navbar-nav">
@@ -49,38 +50,228 @@
             </div>
         </li>
     </ul>
-
 </nav>
-<div>
-    <div class="card-group">
-        <div class="card bg-warning" >
-            <div class="card-body text-center">
-                <p class="card-text">Some more text to increase the height</p>
-                <a href="#" class="btn btn-outline-secondary  stretched-link">See Profile</a>
+
+<div class="row text-center bg-secondary">
+    <div class="col-sm-6 ">
+        <div class="bg-secondary">
+            <div class="card-body">
+                <a href="#" class="btn btn-outline-light stretched-link">Punekerkues</a>
+                <p class="card-text text-white">Regjistrohu / Identifikohu</p>
             </div>
         </div>
-        <div class="card bg-warning" >
-            <div class="card-body text-center">
-                <p class="card-text">Some text inside the second card</p>
-                <a href="#" class="btn btn-outline-secondary  stretched-link">See Profile</a>
+    </div>
+    <div class="col-sm-6">
+        <div class="bg-secondary">
+            <div class="card-body">
+                <a href="#" class="btn btn-outline-light stretched-link">Punedhenes</a>
+                <p class="card-text text-white">Regjistrohu / Identifikohu</p>
             </div>
         </div>
     </div>
 </div>
-</div>
 <hr>
-<div class="container">
-    <button type="button" class="btn btn-primary btn-sm badge-pill "><a class="text-white" href="#"><b>Informatike</b></a></button>
-    <button type="button" class="btn btn-primary btn-sm badge-pill "><a class="text-white" href="#"><b>Hoteleri - Turizem</b></a></button>
-    <button type="button" class="btn btn-primary btn-sm badge-pill "><a class="text-white" href="#"><b>Administrim Biznesi</b></a></button>
-    <button type="button" class="btn btn-primary btn-sm badge-pill "><a class="text-white" href="#"><b>Shitje - Marketing</b></a></button>
-    <button type="button" class="btn btn-primary btn-sm badge-pill "><a class="text-white" href="#"><b>Finance - Banke</b></a></button>
+<div class="container text-center">
+    <button type="button" class="btn btn-secondary btn-sm badge-pill "><a class="text-white" href="#"><small></small><b>Informatike</b></a></button>
+    <button type="button" class="btn btn-secondary btn-sm badge-pill "><a class="text-white" href="#"><b>Hoteleri - Turizem</b></a></button>
+    <button type="button" class="btn btn-secondary btn-sm badge-pill "><a class="text-white" href="#"><b>Administrim Biznesi</b></a></button>
+    <button type="button" class="btn btn-secondary btn-sm badge-pill "><a class="text-white" href="#"><b>Shitje - Marketing</b></a></button>
+    <button type="button" class="btn btn-secondary btn-sm badge-pill "><a class="text-white" href="#"><b>Finance - Banke</b></a></button>
 </div>
 <br>
+<div class="container-fluid" style="width:70%">
+    <div class="row">
+        <div class="col-3 ">
+            <h4>Kerkim i avancuar</h4>
+            <hr>
+            <form class="form-group" action="/action_page.php">
+                <label for="fjalkyc"><small><b>Fjale kyce ose kodin e punes</b></small></label>
+                <input type="text" class="form-control" id="fjalkyc"  name="fjale">
+                <label for="emrikomp"><small><b>Emri i kompanise</b></small></label>
+                <input type="text" class="form-control" id="emrikomp"  name="kompani">
+                <label for="shteti"><small><b>Shteti</b></small></label>
+                <input type="text" class="form-control" id="shteti" placeholder="Zgjidhni shtetin" name="shteti">
+                <label for="qyteti"><small><b>Qyteti</b></small></label>
+                <input type="text" class="form-control" id="qyteti"  name="qyteti">
+                <label for="kategoria"><small><b>Kategoria</b></small></label>
+                <input type="text" class="form-control" id="kategoria" placeholder="Zgjidhni kategorine" name="kategoria">
+                <label for="puna"><small><b>Lloji i punes</b></small></label>
+                <input type="text" class="form-control" id="puna" placeholder="Zgjidhni llojin e punes" name="puna">
+                <br>
+                <button type="submit" class="btn btn-outline-success" style="width: 100%">Kerko</button>
+            </form>
+        </div>
+        <div class="col-6 customlistinghome">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4 p-3">
+                        <img src="./img/201.jpg" class="card-img rounded-circle" style="width: 70px;" alt="image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 text-center">
+            <h4>Identifikohu</h4>
+            <hr>
+            <form class="form-group" action="/action_page.php">
+                <input type="email" class="form-control" id="email" placeholder="Adresa Email" name="email"><br>
+                <input type="password" class="form-control" id="paswd" placeholder="Fjalekalimi" name="pswd"><br>
 
-<div class="container">
-    <h3>duapune.com</h3>
-    <p>This example adds a dropdown menu in the navbar.</p>
+                <button type="submit" class="btn btn-outline-success">Identifikohu</button>
+                <br><br>
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember">Me mbaj mend
+                </label>
+            </form>
+        </div>
+    </div>
 </div>
+<!--footerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr-->
+<!-- Footer -->
+<footer class="page-footer font-small bg-dark">
+    <div style="background: #0099cb">
+        <div class="container">
+            <!-- Grid row-->
+            <div class="row py-4 d-flex align-items-center">
+                <!-- Grid column -->
+                <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                    <h6 class="mb-0">Get connected with us on social networks!</h6>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                    <!-- Facebook -->
+                    <a class="fb-ic">
+                        <i class="fab fa-facebook-f white-text mr-4"> </i>
+                    </a>
+                    <!-- Twitter -->
+                    <a class="tw-ic">
+                        <i class="fab fa-twitter white-text mr-4"> </i>
+                    </a>
+                    <!-- Google +-->
+                    <a class="gplus-ic">
+                        <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                    </a>
+                    <!--Linkedin -->
+                    <a class="li-ic">
+                        <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                    </a>
+                    <!--Instagram-->
+                    <a class="ins-ic">
+                        <i class="fab fa-instagram white-text"> </i>
+                    </a>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row-->
+
+        </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+        <!-- Grid row -->
+        <div class="row mt-3">
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-white">
+
+                <!-- Content -->
+                <h6 class="text-uppercase font-weight-bold">♚𝓡𝓤𝓓𝓘♚</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>Kompani lider ne sherimin e sperdhecit. Ne jemi gjithmone nje hap para se hapi i kohes.</p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-white">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Produkte</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a href="#!">MDBootstrap</a>
+                </p>
+                <p>
+                    <a href="#">MDWordPress</a>
+                </p>
+                <p>
+                    <a href="#">BrandFlow</a>
+                </p>
+                <p>
+                    <a href="#!">Bootstrap Angular</a>
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-white">
+
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Kendi i dijes</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <a href="#!">Keshilla per CV-n</a>
+                </p>
+                <p>
+                    <a href="#!">Keshilla per Interviste</a>
+                </p>
+                <p>
+                    <a href="#!">Udhesuesi i Karrieres</a>
+                </p>
+                <p>
+                    <a href="#!">Burime njerezore</a>
+                </p>
+                <p>
+                    <a href="#!">Shembull CV-je</a>
+                </p>
+                <p>
+                    <a href="#!">Ndihme dhe Suport</a>
+                </p>
+            </div>
+            <!-- Grid column -->
+
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-white">
+                <!-- Links -->
+                <h6 class="text-uppercase font-weight-bold">Kontakte</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p>
+                    <i class="fa fa-home mr-3"></i> Tirane, Selite 1060, AL</p>
+                <p>
+                    <i class="fa fa-envelope mr-3"></i> rudi@gmail.com</p>
+                <p>
+                    <i class="fas fa-phone mr-3"></i> + 355 69 8488011</p>
+                <p>
+                    <i class="fas fa-print mr-3"></i> + 355 695544063</p>
+            </div>
+            <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 text-white">© 2020 Copyright:
+        <a href="#"> duapune.com</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
 </body>
