@@ -1,0 +1,29 @@
+/*global elements styles*/
+a {
+    text-decoration: none !important;
+}
+
+
+
+
+/*generic class for job item*/
+.job-item {
+    max-height: 140px;
+}
+.job-item:hover {
+    background-color: #f0f0f0;
+}
+/*class for job item logo*/
+.job-item .logo {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+}
+
+/*class for promoted job items*/
+.job-item-promotion {
+    background-color: #ffc07c;
+}
+.job-item-promotion:hover {
+    background-color: #fbae5c;
+}
