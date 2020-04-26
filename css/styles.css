@@ -22,8 +22,8 @@ a {
 
 /*class for promoted job items*/
 .job-item-promotion {
-    background-color: #ffc07c;
+    background-color: #1775b845;
 }
 .job-item-promotion:hover {
-    background-color: #fbae5c;
+    background-color: #1775b885;
 }
