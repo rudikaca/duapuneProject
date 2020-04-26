@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm  navbar-dark">
+<nav class="navbar navbar-expand-sm  ">
     <!-- Brand -->
     <a class="navbar-brand text-dark" href="#">
         ♚ duapune.com</a>
@@ -61,7 +61,7 @@
     <div class="col-sm-6 ">
         <div class="bg-#0099cb">
             <div class="card-body">
-                <a href="#" class="btn btn-outline-light stretched-link"><i class="fas fa-user-tie"></i> Punekerkues</a>
+                <a href="#" class="btn btn-lg btn-outline-light stretched-link"><i class="fas fa-user-tie"></i> Punekerkues</a>
                 <p class="card-text text-white">Regjistrohu / Identifikohu</p>
             </div>
         </div>
@@ -69,7 +69,7 @@
     <div class="col-sm-6">
         <div class="bg-#0099cb">
             <div class="card-body">
-                <a href="#" class="btn btn-outline-light stretched-link"><i class="fas fa-briefcase"></i> Punedhenes</a>
+                <a href="#" class="btn btn-lg btn-outline-light stretched-link"><i class="fas fa-briefcase"></i> Punedhenes</a>
                 <p class="card-text text-white">Regjistrohu / Identifikohu</p>
             </div>
         </div>
@@ -104,10 +104,49 @@
                 <input type="text" class="form-control" id="shteti" placeholder="Zgjidhni shtetin" name="shteti">
                 <label for="qyteti"><small><b>Qyteti</b></small></label>
                 <input type="text" class="form-control" id="qyteti"  name="qyteti">
-                <label for="kategoria"><small><b>Kategoria</b></small></label>
-                <input type="text" class="form-control" id="kategoria" placeholder="Zgjidhni kategorine" name="kategoria">
-                <label for="puna"><small><b>Lloji i punes</b></small></label>
-                <input type="text" class="form-control" id="puna" placeholder="Zgjidhni llojin e punes" name="puna">
+                <div class="form-group">
+                    <label for="category"><small><b>Kategoria</b></small></label>
+                    <select class="form-control select-opt" id="category" name="category">
+                        <option value="" selected="selected">Zgjidhni kategorinë</option>
+                        <option value="1">Kontabel-Finance</option>
+                        <option value="2">Administrative-Zyre</option>
+                        <option value="3">Ndërtim-Aftesi</option>
+                        <option value="4">Biznes-Menaxhim Strategjik</option>
+                        <option value="5">Krijuese-Dizajn </option>
+                        <option value="6">Perkujdesje-Ndihme për Klientin</option>
+                        <option value="7">Editoriale-Shkrim</option>
+                        <option value="8">Inxhinieri</option>
+                        <option value="9">HOREKA - Hoteleri-Restorant-Kafe</option>
+                        <option value="10">Burime Njerezore</option>
+                        <option value="11">Instalime-Mirembajtje-Riparime</option>
+                        <option value="12">IT-Zhvillim softesh</option>
+                        <option value="13">Ligjore</option>
+                        <option value="14">Logjistike dhe Transport</option>
+                        <option value="15">Marketing-Produkte</option>
+                        <option value="16">Mjekesore-Shendetsore</option>
+                        <option value="17">Tjeter</option>
+                        <option value="18">Prodhim dhe Operacional</option>
+                        <option value="19">Menaxhim Projektesh-Programesh</option>
+                        <option value="20">Sigurim i Cilësise-Siguria</option>
+                        <option value="21">Shkencore</option>
+                        <option value="22">Shitje-Zhvillim Biznesi</option>
+                        <option value="23">Siguria fizike-Sherbime Mbrojtese</option>
+                        <option value="24">Trajnim-Instruksione </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="job_type">Lloji i punës</label>
+                    <select class="form-control select-opt" id="job_type" name="job_type">
+                        <option value="" selected="selected">Zgjidhni llojin e punës</option>
+                        <option value="1">Kohe e pjesshme</option>
+                        <option value="2">Kohe e plote </option>
+                        <option value="3">E perkohshme</option>
+                        <option value="4">Internship</option>
+                        <option value="5">Tjeter</option>
+                        <option value="6">Konsulent</option>
+                        <option value="7">Kontrate me kohe te caktuar</option>
+                    </select>
+                </div>
                 <br>
                 <button type="submit" class="btn btn-outline-success" style="width: 100%">Kerko</button>
             </form>
