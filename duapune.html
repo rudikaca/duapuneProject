@@ -16,7 +16,7 @@
 <body>
 
 <!--Navbar -->
-<nav class="navbar navbar-expand-sm  ">
+<nav id="navbar" class="navbar navbar-expand-sm">
     <a class="navbar-brand text-dark" href="#">♚ duapune.com</a>
     <ul class="navbar-nav">
         <li class="nav-item">
@@ -44,7 +44,7 @@
                 <b>Na kontaktoni</b>
             </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Na kontaktoni</a>
+                <a class="dropdown-item" href="kontakti.html">Na kontaktoni</a>
                 <a class="dropdown-item" href="#">Mendimi Juaj</a>
                 <a class="dropdown-item" href="#">Trego historine tende</a>
             </div>
@@ -57,7 +57,31 @@
     <div class="col-sm-6 ">
         <div class="bg-#0099cb">
             <div class="card-body">
-                <a href="#" class="btn btn-lg btn-outline-light stretched-link"><i class="fas fa-user-tie"></i> Punekerkues</a>
+                <div class="btn btn-lg btn-outline-light stretched-link" data-toggle="modal" data-target="#modal_punekerkues"><i class="fas fa-user-tie"></i> Punekerkues</div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="modal_punekerkues" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Punekerkues</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Modal body text goes here.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
                 <p class="card-text text-white">Regjistrohu / Identifikohu</p>
             </div>
         </div>
@@ -65,7 +89,29 @@
     <div class="col-sm-6">
         <div class="bg-#0099cb">
             <div class="card-body">
-                <a href="#" class="btn btn-lg btn-outline-light stretched-link"><i class="fas fa-briefcase"></i> Punedhenes</a>
+                <div class="btn btn-lg btn-outline-light stretched-link" data-toggle="modal" data-target="#modal_punedhenes"><i class="fas fa-briefcase"></i> Punedhenes</div><!-- Modal -->
+                <div class="modal fade" id="modal_punedhenes" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Punedhenes</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Modal body text goes here.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
                 <p class="card-text text-white">Regjistrohu / Identifikohu</p>
             </div>
         </div>
@@ -399,10 +445,10 @@
                 <h4>Identifikohu</h4>
                 <hr>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="email" placeholder="Adresa Email" name="email"><br>
+                    <input type="email" class="form-control" id="email" placeholder="Adresa Email" name="email">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="paswd" placeholder="Fjalekalimi" name="pswd"><br>
+                    <input type="password" class="form-control" id="paswd" placeholder="Fjalekalimi" name="pswd">
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-outline-success">Identifikohu</button>
@@ -412,7 +458,7 @@
                     <label for="remember_me" class="pull-left checkbox-inline">Me mbaj mend</label>
                     <hr>
                 </div>
-                <label><a class="btn btn-outline-primary" href="https://duapune.com/register">Regjistrohu</a></label>
+                <label><a class="btn btn-outline-primary" href="register_form.html">Regjistrohu</a></label>
             </form>
         </div>
     </div>
@@ -557,6 +603,6 @@
     <!-- Copyright -->
 
 </footer>
-<!-- Footer -->
+
 
 </body>
