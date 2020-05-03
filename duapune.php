@@ -4,53 +4,19 @@
     <title>duapune.com</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./libs/bootstrap.min.css">
-    <link href="libs/fontawesome/css/all.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
 
-    <script src="./libs/jquery.min.js"></script>
-    <script src="./libs/popper.min.js"></script>
-    <script src="./libs/bootstrap.min.js"></script>
+    <?php include 'partials/links.php'; ?>
 
 </head>
 <body>
 
-<!--Navbar -->
-<nav id="navbar" class="navbar bg-dark fixed-top navbar-expand-sm">
-    <a class="navbar-brand text-white" href="duapune.html">♚ duapune.com</a>
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link text-white" href="#"><strong>Rreth nesh</strong></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-white" href="#"><b>Sherbime</b></a>
-        </li>
+<!-- start include data-->
+<?php include 'partials/data/job-items.php'; ?>
+<?php include 'partials/data/proffesion-data.php'; ?>
+<!-- end include data-->
 
-<!-- Dropdown -->
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbardrop1" data-hover="dropdown" data-toggle="dropdown">
-                <b>Veprime te shpejta</b>
-            </a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" disabled=""><b>Punekerkues</b></a>
-                <a class="dropdown-item" href="#">Krijo/Shto CV</a>
-                <a class="dropdown-item" href="#">Shembull CV-je</a>
-                <a class="dropdown-item" disabled=""><b>Punedhenes</b></a>
-                <a class="dropdown-item" href="#">Posto pune</a>
-            </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbardrop" data-hover="dropdown" data-toggle="dropdown">
-                <b>Na kontaktoni</b>
-            </a>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="kontakti.html">Na kontaktoni</a>
-                <a class="dropdown-item" href="#">Mendimi Juaj</a>
-                <a class="dropdown-item" href="#">Trego historine tende</a>
-            </div>
-        </li>
-    </ul>
-</nav>
+<!--Navbar -->
+<?php include 'partials/header.php'; ?>
 
 <!-- Head (Regjistrohu / Identifikohu)-->
 <div class="row text-center mt-5" style="height: 160px; background: #0099cb">
@@ -101,7 +67,7 @@
                                 <a class="float-left mr-5" href=""><small>Nuk keni llogari ne Duapune.com?</small></a>
                                 <label><a href="" class="btn btn-primary" data-toggle="modal" data-target="#sideModalTLInfo">Regjistrohu</a></label>
 
-                                <!-- Central Modal Medium Info -->
+                                <!-- Regjistrohu si Punekerkues modal -->
                                 <div class="modal fade left" id="sideModalTLInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                                      aria-hidden="true">
                                     <div class="modal-dialog modal-notify modal-info modal-side modal-top-left" role="document">
@@ -111,7 +77,7 @@
                                             <div class="modal-header">
                                                 <p class="heading lead"><b>Regjistrohu si Punekerkues</b></p>
 
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <button type="button" class="close" onclick="$('#sideModalTLInfo').modal('hide')" aria-label="Close">
                                                     <span aria-hidden="true" class="white-text">&times;</span>
                                                 </button>
                                             </div>
@@ -169,7 +135,7 @@
                                             <!--Footer-->
                                             <div class="modal-footer justify-content-center">
                                                 <a href="" class="btn btn-outline-primary" data-toggle="modal">Regjistrohu</a>
-                                                <a type="button" class="btn btn-outline-danger " data-dismiss="modal">Jo, faleminderit</a>
+                                                <a type="button" class="btn btn-outline-danger " onclick="$('#sideModalTLInfo').modal('hide')">Jo, faleminderit</a>
                                             </div>
                                         </div>
                                         <!--/.Content-->
@@ -234,7 +200,7 @@
                                 <a class="float-left mr-5" href=""><small>Nuk keni llogari ne Duapune.com?</small></a>
                                 <label><a href="" class="btn btn-primary" data-toggle="modal" data-target="#sideModalTLInfo2">Regjistrohu</a></label>
 
-                                <!-- Central Modal Medium Info -->
+                                <!-- Regjistrohu si Punedhenes modal -->
                                 <div class="modal fade left" id="sideModalTLInfo2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                                      aria-hidden="true">
                                     <div class="modal-dialog modal-notify modal-info modal-side modal-top-left" role="document">
@@ -244,7 +210,7 @@
                                             <div class="modal-header">
                                                 <p class="heading lead"><b>Regjistrohu si Punedhenes</b></p>
 
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <button type="button" class="close" onclick="$('#sideModalTLInfo2').modal('hide')" aria-label="Close">
                                                     <span aria-hidden="true" class="white-text">&times;</span>
                                                 </button>
                                             </div>
@@ -302,7 +268,7 @@
                                             <!--Footer-->
                                             <div class="modal-footer justify-content-center">
                                                 <a href="" class="btn btn-outline-primary" data-toggle="modal">Regjistrohu</a>
-                                                <a type="button" class="btn btn-outline-danger " data-dismiss="modal">Jo, faleminderit</a>
+                                                <a type="button" class="btn btn-outline-danger " onclick="$('#sideModalTLInfo2').modal('hide')">Jo, faleminderit</a>
                                             </div>
                                         </div>
                                         <!--/.Content-->
@@ -325,18 +291,19 @@
 
 <!-- butonat posht head -->
 <div class="container text-center">
-    <label><a class="btn btn-outline-primary btn-sm badge-pill" href="#"><b>Informatike</b></a></label>
-    <label><a class="btn btn-outline-primary btn-sm badge-pill" href="#"><b>Hoteleri - Turizem</b></a></label>
-    <label><a class="btn btn-outline-primary btn-sm badge-pill" href="#"><b>Administrim Biznesi</b></a></label>
-    <label><a class="btn btn-outline-primary btn-sm badge-pill" href="#"><b>Shitje - Marketing</b></a></label>
-    <label><a class="btn btn-outline-primary btn-sm badge-pill" href="#"><b>Finance - Banke</b></a></label>
+    <?php
+    foreach ($proffesionsData as $index => $proffesiondata) {
+        include 'partials/proffesions.php';
+    }
+    ?>
 </div>
 <br>
 
 <!--Format-->
 <div class="mb-3 container-fluid" style="width:85%">
     <div class="row">
-<!-- Forma Kerkimi i avancuar -->
+
+        <!-- Forma Kerkimi i avancuar -->
         <div class="col-3 ">
             <form method="GET" action="https://(KUR TE KRIJOHET FILE PHP)" accept-charset="UTF-8">
                 <h4 class="text-center" >Kerkim i avancuar</h4>
@@ -532,118 +499,21 @@
             </form>
         </div>
 
-<!-- Shfaqja e puneve NE MES-->
+        <!-- Shfaqja e puneve NE MES-->
         <div class="col-6 customlistinghome">
             <div class="row">
                 <!--job item 1-->
-                <div class="card col-12 mb-1 job-item">
-                    <div class="row no-gutters">
-                        <div class="col-1">
-                            <img src="img/201.jpg" class="card-img rounded-circle logo" alt="foto">
-                        </div>
-                        <div class="col-8">
-                            <div class="card-body">
-                                <div class="card-text">Online English Teacher (work from home)</div>
-                                <div class="card-text">
-                                    <small class="text-muted">Native Camp PTE. LTD</small>
-                                </div>
-                                <div class="card-text mt-2">
-                                    <button type="button" class="btn btn-outline-primary btn-sm">Mesues</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card-body">
-                                <div class="card-text">
-                                    <small class="text-muted">
-                                        <a href="#"><i class="fa fa-location-arrow" aria-hidden="true"></i> Tirane</a>
-                                    </small>
-                                </div>
-                                <div class="card-text">
-                                    <small class="text-muted"><i class="fa fa-clock" aria-hidden="true"></i> 24/04/2020</small>
-                                </div>
-                                <div class="card-text mt-2">
-                                    <button type="button" class="btn btn-success btn-sm">Success</button>
-                                </div>
-                            </div>
 
-                        </div>
-                    </div>
-                </div>
-                <!--job item 2-->
-                <div class="card col-12 mb-1 job-item job-item-promotion">
-                    <div class="row no-gutters">
-                        <div class="col-1">
-                            <img src="img/201.jpg" class="card-img rounded-circle logo" alt="foto">
-                        </div>
-                        <div class="col-8">
-                            <div class="card-body">
-                                <div class="card-text">Online English Teacher (work from home)</div>
-                                <div class="card-text">
-                                    <small class="text-muted">Native Camp PTE. LTD</small>
-                                </div>
-                                <div class="card-text mt-2">
-                                    <button type="button" class="btn btn-outline-primary btn-sm">Mesues</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card-body">
-                                <div class="card-text">
-                                    <small class="text-muted">
-                                        <a href="#"><i class="fa fa-location-arrow" aria-hidden="true"></i> Tirane</a>
-                                    </small>
-                                </div>
-                                <div class="card-text">
-                                    <small class="text-muted"><i class="fa fa-clock" aria-hidden="true"></i> 24/04/2020</small>
-                                </div>
-                                <div class="card-text mt-2">
-                                    <button type="button" class="btn btn-success btn-sm">Success</button>
-                                </div>
-                            </div>
+                <?php
+                foreach ($jobItems as $index => $jobItem) {
+                    include 'partials/jobs/job-item.php';
+                }
+                ?>
 
-                        </div>
-                    </div>
-                </div>
-                <!--job item 3-->
-                <div class="card col-12 mb-1 job-item">
-                    <div class="row no-gutters">
-                        <div class="col-1">
-                            <img src="img/201.jpg" class="card-img rounded-circle logo" alt="foto">
-                        </div>
-                        <div class="col-8">
-                            <div class="card-body">
-                                <div class="card-text">Online English Teacher (work from home)</div>
-                                <div class="card-text">
-                                    <small class="text-muted">Native Camp PTE. LTD</small>
-                                </div>
-                                <div class="card-text mt-2">
-                                    <button type="button" class="btn btn-outline-primary btn-sm">Mesues</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card-body">
-                                <div class="card-text">
-                                    <small class="text-muted">
-                                        <a href="#"><i class="fa fa-location-arrow" aria-hidden="true"></i> Tirane</a>
-                                    </small>
-                                </div>
-                                <div class="card-text">
-                                    <small class="text-muted"><i class="fa fa-clock" aria-hidden="true"></i> 24/04/2020</small>
-                                </div>
-                                <div class="card-text mt-2">
-                                    <button type="button" class="btn btn-success btn-sm">Success</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
-<!--Forma Identifikohu-->
+        <!--Forma Identifikohu-->
         <div class="col-3 text-center">
             <form method="POST" action="https://(KUR TE KRIJOHET FILE PHP)" accept-charset="UTF-8">
                 <h4>Identifikohu</h4>
@@ -662,151 +532,17 @@
                     <label for="remember_me" class="pull-left checkbox-inline">Me mbaj mend</label>
                     <hr>
                 </div>
-                <label><a class="btn btn-outline-primary" href="register_form.html">Regjistrohu</a></label>
+                <label><a class="btn btn-outline-primary" href="register_form.php">Regjistrohu</a></label>
             </form>
         </div>
+
     </div>
 </div>
 
-<!--footerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr-->
-<!-- Footer -->
-<footer class="page-footer font-small bg-dark">
-    <div style="background: #0099cb">
-        <div class="container">
-            <!-- Grid row-->
-            <div class="row py-4 d-flex align-items-center">
-                <!-- Grid column -->
-                <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                    <h6 class="mb-0">Get connected with us on social networks!</h6>
-                </div>
-                <!-- Grid column -->
+<?php include 'partials/footer.php'; ?>
 
-                <!-- Grid column -->
-                <div class="col-md-6 col-lg-7 text-center text-md-right">
-
-                    <!-- Facebook -->
-                    <a class="fb-ic">
-                        <i class="fab fa-facebook-f white-text mr-4"> </i>
-                    </a>
-                    <!-- Twitter -->
-                    <a class="tw-ic">
-                        <i class="fab fa-twitter white-text mr-4"> </i>
-                    </a>
-                    <!-- Google +-->
-                    <a class="gplus-ic">
-                        <i class="fab fa-google-plus-g white-text mr-4"> </i>
-                    </a>
-                    <!--Linkedin -->
-                    <a class="li-ic">
-                        <i class="fab fa-linkedin-in white-text mr-4"> </i>
-                    </a>
-                    <!--Instagram-->
-                    <a class="ins-ic">
-                        <i class="fab fa-instagram white-text"> </i>
-                    </a>
-
-                </div>
-                <!-- Grid column -->
-
-            </div>
-            <!-- Grid row-->
-
-        </div>
-    </div>
-
-    <!-- Footer Links -->
-    <div class="container text-center text-md-left mt-5">
-
-        <!-- Grid row -->
-        <div class="row mt-3">
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-white">
-
-                <!-- Content -->
-                <h6 class="text-uppercase font-weight-bold">♚𝓡𝓤𝓓𝓘♚</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>Kompani lider ne sherimin e sperdhecit. Ne jemi gjithmone nje hap para se hapi i kohes.</p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-white">
-
-                <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Produkte</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
-                    <a href="#!">MDBootstrap</a>
-                </p>
-                <p>
-                    <a href="#">MDWordPress</a>
-                </p>
-                <p>
-                    <a href="#">BrandFlow</a>
-                </p>
-                <p>
-                    <a href="#!">Bootstrap Angular</a>
-                </p>
-
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-white">
-
-                <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Kendi i dijes</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
-                    <a href="#!">Keshilla per CV-n</a>
-                </p>
-                <p>
-                    <a href="#!">Keshilla per Interviste</a>
-                </p>
-                <p>
-                    <a href="#!">Udhesuesi i Karrieres</a>
-                </p>
-                <p>
-                    <a href="#!">Burime njerezore</a>
-                </p>
-                <p>
-                    <a href="#!">Shembull CV-je</a>
-                </p>
-                <p>
-                    <a href="#!">Ndihme dhe Suport</a>
-                </p>
-            </div>
-            <!-- Grid column -->
-
-
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-white">
-                <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Kontakte</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
-                    <i class="fas fa-home mr-3"></i> Tirane, Selite 1060, AL</p>
-                <p>
-                    <i class="fas fa-envelope mr-3"></i> rudi@gmail.com</p>
-                <p>
-                    <i class="fas fa-phone mr-3"></i> + 355 69 8488011</p>
-                <p>
-                    <i class="fas fa-print mr-3"></i> + 355 69 5544063</p>
-            </div>
-            <!-- Grid column -->
-        </div>
-        <!-- Grid row -->
-    </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3 text-white">© 2020 Copyright:
-        <a href="duapune.html"> duapune.com</a>
-    </div>
-    <!-- Copyright -->
-
-</footer>
-
+<script>
+    <?php include 'partials/scripts.php'; ?>
+</script>
 
 </body>
