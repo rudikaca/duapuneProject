@@ -17,7 +17,7 @@
             <div class="dropdown-menu">
                 <a class="dropdown-item" disabled=""><b>Punekerkues</b></a>
                 <a class="dropdown-item" href="#">Krijo/Shto CV</a>
-                <a class="dropdown-item" href="#">Shembull CV-je</a>
+                <a class="dropdown-item" href="../files/CV-Duapune.pdf">Shembull CV-je</a>
                 <a class="dropdown-item" disabled=""><b>Punedhenes</b></a>
                 <a class="dropdown-item" href="#">Posto pune</a>
             </div>
