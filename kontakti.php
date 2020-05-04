@@ -114,23 +114,19 @@
             <!--<h1>My First Google Map</h1>-->
             <div class="mapouter col-md-12">
                 <div class="gmap_canvas">
-                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=tirana&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                    </iframe><a href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/"></a>
+                    <div id="googleMap" style="width:90%;height:500px;"></div>
+
+                    <script>
+                        function myMap() {
+                            var mapProp= {
+                                center:new google.maps.LatLng(41.312787, 19.800783),
+                                zoom:15,
+                            };
+                            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                        }
+                    </script>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_JSS5SqsvCdcAq_E7ojjgheKFxgUoi60&callback=myMap"></script>
                 </div>
-                <style>
-                    .mapouter{
-                        position:relative;
-                        text-align:right;
-                        height:500px;
-                        width:1200px;
-                    }
-                    .gmap_canvas {
-                        overflow:hidden;
-                        background:none!important;
-                        height:500px;
-                        width:600px;
-                    }
-                </style>
             </div>
         </div>
     </div>

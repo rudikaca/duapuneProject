@@ -534,6 +534,14 @@
                 </div>
                 <label><a class="btn btn-outline-primary" href="register_form.php">Regjistrohu</a></label>
             </form>
+
+        <!-- Statistikat-->
+            <div class="statistika">
+                <span style="text-transform: uppercase;">Statistika</span>
+                <p><i>361</i><b>Punë aktive</b></p>
+                <p><i>109004</i><b>Punëkërkues</b></p>
+                <p><i>7386</i><b>Punëdhënës</b></p>
+            </div>
         </div>
 
     </div>
