@@ -536,11 +536,26 @@
             </form>
 
         <!-- Statistikat-->
-            <div class="statistika">
-                <span style="text-transform: uppercase;">Statistika</span>
-                <p><i>361</i><b>Punë aktive</b></p>
-                <p><i>109004</i><b>Punëkërkues</b></p>
-                <p><i>7386</i><b>Punëdhënës</b></p>
+            <div class="statistika col-12 mt-4" style="padding-left: 0px;padding-right: 0px;">
+                <div class="btn-group btn-group-lg rounded-lg w-100 text-white" style="background-image: url('img/statistics.png');">
+
+                    <div class="btn-group-vertical text-white w-75" >
+                        <button type="button" class="btn" >
+                            <div><i>361</i></div>
+                            <div><small><b>Pune aktive</b></small></div>
+                        </button>
+                        <button type="button" class="btn"><div><i>10008901</i></div>
+                            <div><small><b>Punekerkues</b></small></div>
+                        </button>
+                        <button type="button" class="btn">
+                            <div><i>8539</i></div>
+                            <div><small><b>Punedhenes</b></small></div>
+                        </button>
+                    </div>
+
+                    <button type="button" class="btn">Statistika</button>
+
+                </div>
             </div>
         </div>
 
