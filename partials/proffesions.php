@@ -1,5 +1,5 @@
 <label>
-    <a class="btn btn-outline-primary btn-sm badge-pill"
+    <a class="btn btn-primary btn-sm badge-pill"
        href="<?php echo $proffesiondata['href']; ?>"
        target="_blank">
         <b><?php echo $proffesiondata['title']; ?></b>
