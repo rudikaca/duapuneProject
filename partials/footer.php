@@ -1,6 +1,6 @@
 <!-- Footer -->
 <footer class="pt-0 page-footer font-small bg-dark">
-    <div style="background: #0099cb">
+    <div class="social-networks-container">
         <div class="container">
             <!-- Grid row-->
             <div class="row py-4 d-flex align-items-center">
@@ -45,7 +45,6 @@
 
     <!-- Footer Links -->
     <div class="container text-center text-md-left mt-5">
-
         <!-- Grid row -->
         <div class="row mt-3">
 
@@ -54,7 +53,7 @@
 
                 <!-- Content -->
                 <h6 class="text-uppercase font-weight-bold">♚𝓡𝓤𝓓𝓘♚</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto">
                 <p>Kompani lider ne sherimin e sperdhecit. Ne jemi gjithmone nje hap para se hapi i kohes.</p>
             </div>
             <!-- Grid column -->
@@ -64,7 +63,7 @@
 
                 <!-- Links -->
                 <h6 class="text-uppercase font-weight-bold">Produkte</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto">
                 <p>
                     <a style="color: white" href="#!">MDBootstrap</a>
                 </p>
@@ -86,7 +85,7 @@
 
                 <!-- Links -->
                 <h6 class="text-uppercase font-weight-bold">Kendi i dijes</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto">
                 <p>
                     <a style="color: white" href="#!">Keshilla per CV-n</a>
                 </p>
@@ -108,12 +107,11 @@
             </div>
             <!-- Grid column -->
 
-
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-white">
                 <!-- Links -->
                 <h6 class="text-uppercase font-weight-bold">Kontakte</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto">
                 <p>
                     <i class="fas fa-home mr-3"></i> Tirane, Selite 1060, AL</p>
                 <p>

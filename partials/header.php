@@ -45,7 +45,7 @@
             <div class="dropdown-menu">
                 <a href="../my_account.php" class="dropdown-item">Llogaria ime</a>
                 <a href="../personal_data.php" class="dropdown-item">Të dhëna personale</a>
-                <a href="" class="dropdown-item">Ndrysho fjalëkalimin</a>
+                <a href="../change_password.php" class="dropdown-item">Ndrysho fjalëkalimin</a>
                 <a href="" class="dropdown-item" target="_blank">Edukim dhe Këshilla</a>
                 <a href="" class="dropdown-item">Punët e Sygjeruara</a>
                 <a href="" class="dropdown-item">Dilni</a>
@@ -53,15 +53,15 @@
         </li>
         <li class="nav-item dropdown navbar-right">
             <a class="nav-link dropdown-toggle text-white" href="#" data-hover="dropdown" data-toggle="dropdown">
-                <img src="https://duapune.com/img/flags/al.png" class="lang-flag" alt="Shqip"> Shqip
+                <img src="img/al.png" class="lang-flag" alt="Shqip"> Shqip
             </a>
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="">
-                    <img src="https://duapune.com/img/flags/us_en.png" class="lang-flag">&nbsp;<span>English</span>
+                    <img src="img/us_en.png" class="lang-flag">&nbsp;<span>English</span>
                 </a>
 
                 <a class="dropdown-item" href="">
-                    <img src="https://duapune.com/img/flags/it.png" class="lang-flag">&nbsp;<span>Italiano</span>
+                    <img src="img/it.png" class="lang-flag">&nbsp;<span>Italiano</span>
                 </a>
             </div>
         </li>

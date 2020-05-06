@@ -47,7 +47,7 @@
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
-                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle " src="https://duapune.com/img/2-cv.svg" alt="Card image cap">
+                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle " src="img/2-cv.svg" alt="Card image cap">
                                                 </div>
 
                                                 <div class="w-100 card-body p-0" style="background-color: #efefef">
@@ -62,7 +62,7 @@
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
-                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="https://duapune.com/img/3-list-cv.svg" alt="Card image cap">
+                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="img/3-list-cv.svg" alt="Card image cap">
                                                 </div>
 
                                                 <div class="w-100 card-body p-0" style="background-color: #efefef">
@@ -77,7 +77,7 @@
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
-                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="https://duapune.com/img/4-letra-e-motivimit.svg" alt="Card image cap">
+                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="img/4-letra-e-motivimit.svg" alt="Card image cap">
                                                 </div>
 
                                                 <div class="w-100 card-body p-0" style="background-color: #efefef">
@@ -90,7 +90,7 @@
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
-                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="https://duapune.com/img/5-dokumenta.svg" alt="Card image cap">
+                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="img/5-dokumenta.svg" alt="Card image cap">
                                                 </div>
 
                                                 <div class="w-100 card-body p-0" style="background-color: #efefef">
@@ -112,7 +112,7 @@
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
-                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="https://duapune.com/img/7-aplikimet.svg" alt="Card image cap">
+                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="img/7-aplikimet.svg" alt="Card image cap">
                                                 </div>
 
                                                 <div class="w-100 card-body p-0" style="background-color: #efefef">
@@ -125,7 +125,7 @@
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
-                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="https://duapune.com/img/8-pune-te-reja.svg" alt="Card image cap">
+                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="img/8-pune-te-reja.svg" alt="Card image cap">
                                                 </div>
 
                                                 <div class="w-100 card-body p-0" style="background-color: #efefef">
@@ -138,7 +138,7 @@
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
-                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="https://duapune.com/img/9-punet-e-preferuara.svg" alt="Card image cap">
+                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="img/9-punet-e-preferuara.svg" alt="Card image cap">
                                                 </div>
 
                                                 <div class="w-100 card-body p-0" style="background-color: #efefef">
@@ -151,7 +151,7 @@
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
-                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="https://duapune.com/img/10-pune-sipas-preferences.svg" alt="Card image cap">
+                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="img/10-pune-sipas-preferences.svg" alt="Card image cap">
                                                 </div>
 
                                                 <div class="w-100 card-body p-0" style="background-color: #efefef">
@@ -186,7 +186,7 @@
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
-                                                    <h1 style="width: 80px; height: 80px; color: white; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo">1</h1>
+                                                    <h1 style="width: 80px; height: 80px; color: white; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo"> 01</h1>
                                                 </div>
 
                                                 <div class="w-100 card-body p-0" style="background-color: #efefef">
@@ -199,7 +199,7 @@
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
-                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="https://duapune.com/img/3-list-cv.svg" alt="Card image cap">
+                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="img/3-list-cv.svg" alt="Card image cap">
                                                 </div>
 
                                                 <div class="w-100 card-body p-0" style="background-color: #efefef">
@@ -212,7 +212,7 @@
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
-                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="https://duapune.com/img/3-list-cv.svg" alt="Card image cap">
+                                                    <img style="width: 80px; height: 80px; background-color:#0092cc" class="mx-auto card-img-overlay rounded-circle logo" src="img/3-list-cv.svg" alt="Card image cap">
                                                 </div>
 
                                                 <div class="w-100 card-body p-0" style="background-color: #efefef">
