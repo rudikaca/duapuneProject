@@ -94,9 +94,9 @@
 
     <!--Faqja ime text-->
     <div class="col-md-12 container" style="background-color: #f4f8fa">
-        <div class="col-md-12 mt-5 text-center">
-            <h1 style="color: #004085">Te dhena personale</h1>
-            <h5><a style="color: #0056b3" href="">Kreu</a> > <a style="color: #0056b3" href="">Profili</a> > Informacion personal</h5>
+        <div class="col-md-12 mb-4 mt-5 text-center">
+            <h1 style="color: #005a8c">Te dhena personale</h1>
+            <h5><a style="color: #0056b3" href="index.php">Kreu</a> > <a style="color: #0056b3" href="my_account.php">Profili</a> > Informacion personal</h5>
         </div>
 
         <!--Format-->
@@ -106,21 +106,20 @@
                     <div class="container">
 
                         <div class="card border border-0 mb-4 shadow">
-                            <div class="card-header" style="border-radius: 10px 10px 0px 0px; background-color: #0092cc; color: white; font-size: 20px">
+                            <div class="card-header" style="border-radius: 10px 10px 0px 0px; background-color: #005a8c; color: white; font-size: 20px">
                                 Te dhena personale
                             </div>
-
-                            <div class="col-md-12 mb-3 mt-3 row mx-auto">
+                            <div class="col-md-12 mb-1 mt-3 row mx-auto">
                                 <div class="col-3">
-                                    <label for="">Emri *</label>
+                                    <label for=""><small><b>Emri *</b></small></label>
                                     <input type="text" class="form-control" placeholder="Emri">
                                 </div>
                                 <div class="col-3">
-                                    <label for="">Mbiemri *</label>
+                                    <label for=""><small><b>Mbiemri *</b></small></label>
                                     <input type="text" class="form-control" placeholder="Mbiemri">
                                 </div>
                                 <div class="col-3">
-                                    <label for="">Gjinia *</label>
+                                    <label for=""><small><b>Gjinia *</b></small></label>
                                     <select class="browser-default custom-select">
                                         <option selected>Gjinia</option>
                                         <option value="1">Mashkull</option>
@@ -128,7 +127,7 @@
                                     </select>
                                 </div>
                                 <div class="col-3">
-                                    <label for="">Gjendja civile</label>
+                                    <label for=""><small><b>Gjendja civile</b></small></label>
                                     <select class="browser-default custom-select">
                                         <option selected>Gjendja civile</option>
                                         <option value="1">Beqar</option>
@@ -137,17 +136,17 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-12 mb-3 mt-3 row mx-auto">
+                            <div class="col-md-12 mb-1 mt-3 row mx-auto">
                                 <div class="col-3">
-                                    <label for="">Datelindja</label>
-                                    <input type="text" class="form-control" placeholder="dd-mm-yyyy">
+                                    <label for=""><small><b>Datelindja</b></small></label>
+                                    <input type="date" class="form-control" placeholder="dd-mm-yyyy">
                                 </div>
                                 <div class="col-3">
-                                    <label for="">Adresa</label>
+                                    <label for=""><small><b>Adresa</b></small></label>
                                     <input type="text" class="form-control" placeholder="psh: Rr.Deshmoret e Kombit">
                                 </div>
                                 <div class="col-3">
-                                    <label for="">Shteti</label>
+                                    <label for=""><small><b>Shteti</b></small></label>
                                     <select class="browser-default custom-select">
                                         <option selected="selected" value="">Zgjidhni shtetin</option>
                                         <option value="1">Shqipëri</option><option value="2">Kosovë</option>
@@ -209,7 +208,7 @@
                                     </select>
                                 </div>
                                 <div class="col-3">
-                                    <label for="">Qyteti</label>
+                                    <label for=""><small><b>Qyteti</b></small></label>
                                     <select class="browser-default custom-select">
                                         <option selected>Zgjidhni qytetin</option>
                                         <option value="1">Tirane</option><option value="2">Durres</option>
@@ -259,34 +258,468 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-12 mb-3 mt-3 row mx-auto">
+                            <div class="col-md-12 mb-1 mt-3 row mx-auto">
                                 <div class="col-3">
-                                    <label for="">Emri *</label>
-                                    <input type="text" class="form-control" placeholder="Emri">
+                                    <label for=""><small><b>Telefon</b></small></label>
+                                    <input type="tel" class="form-control" placeholder="psh: +355 222222">
                                 </div>
                                 <div class="col-3">
-                                    <label for="">Mbiemri *</label>
-                                    <input type="text" class="form-control" placeholder="Mbiemri">
+                                    <label for=""><small><b>Celular</b></small></label>
+                                    <input type="tel" class="form-control" placeholder="psh: +355 698488011">
                                 </div>
                                 <div class="col-3">
-                                    <label for="">Gjinia *</label>
+                                    <label for=""><small><b>Fotografi</b></small></label>
+                                    <form class="md-form">
+                                        <div class="file-field">
+                                            <a class="btn-floating purple-gradient mt-0 float-left">
+                                                <input type="file">
+                                            </a>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-3">
+                                    <label for=""><small><b>Leje drejtimi</b></small></label>
                                     <select class="browser-default custom-select">
-                                        <option selected>Gjinia</option>
-                                        <option value="1">Mashkull</option>
-                                        <option value="2">Femer</option>
-                                    </select>
-                                </div>
-                                <div class="col-3">
-                                    <label for="">Gjendja civile</label>
-                                    <select class="browser-default custom-select">
-                                        <option selected>Gjendja civile</option>
-                                        <option value="1">Beqar</option>
-                                        <option value="2">i/e martuar</option>
-                                        <option value="2">i/e ve</option>
+                                        <option selected>Zgjidhni patenten</option>
+                                        <option value="1">A</option>
+                                        <option value="2">B</option>
+                                        <option value="2">C</option>
+                                        <option value="2">D</option>
+                                        <option value="2">BE</option>
+                                        <option value="2">CE</option>
+                                        <option value="2">DE</option>
                                     </select>
                                 </div>
                             </div>
+                            <div class="col-md-12 mb-1 mt-3 row mx-auto">
+                                <div class="col-6">
+                                    <label for=""><small><b>Username</b></small></label>
+                                    <input type="email" class="form-control" placeholder="kacarudi@gmail.com">
+                                </div>
+                                <div class="col-6">
+                                    <label for=""><small><b>Username i ri</b></small></label>
+                                    <input type="email" class="form-control" placeholder="New Email">
+                                </div>
 
+                            </div>
+                            <div class="col-md-12 mb-3 mt-1 row mx-auto">
+                                <div class="col-12">
+                                    <small>
+                                        <strong>Kujdes!:</strong> Ky email përdoret për tu identifikuar në portalin e duapune.com. Nëse e ndryshoni, sigurohuni që ta konfirmoni kete adresë nëpërmjet emailit që do tju dërgohet dhe më pas të përdorni adresën e re për të hyrë në portal.
+                                    </small>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card border border-0 mb-4 shadow">
+                            <div class="card-header" style="border-radius: 10px 10px 0px 0px; background-color: #005a8c; color: white; font-size: 20px">
+                                Eksperienca dhe Pritshmeri
+                            </div>
+
+                            <div class="col-md-12 mb-1 mt-3 row mx-auto">
+                                <div class="col-4">
+                                    <label for=""><small><b>Statusi i punesimit</b></small></label>
+                                    <select class="form-control" id="employment_status" name="employment_status">
+                                        <option value="" selected="selected">Zgjidhni statusin e punësimit</option>
+                                        <option value="1">Part-Time Employed</option>
+                                        <option value="2">Full - Time Employed</option>
+                                        <option value="3">Freelance</option>
+                                        <option value="4">Consulent / Advisor</option>
+                                        <option value="5">Self-employed</option>
+                                        <option value="6">Unemployed</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for=""><small><b>Niveli i arsimit</b></small></label>
+                                    <select class="form-control" id="education_level" name="education_level">
+                                        <option value="" selected="selected">Zgjidhni nivelin e edukimit</option>
+                                        <option value="1">Shkolle e Mesme</option>
+                                        <option value="2">Shkolle e Mesme Profesionale</option>
+                                        <option value="3">Universitet ne vazhdim</option>
+                                        <option value="4">Universitet</option>
+                                        <option value="5">Master profesional ne vazhdim</option>
+                                        <option value="6">Master profesional</option>
+                                        <option value="7">Master shkencor ne vazhdim</option>
+                                        <option value="8">Master shkencor</option>
+                                        <option value="9">Doktorature ne proces</option>
+                                        <option value="10">Doktorature</option>
+                                        <option value="11">Post-doktorature</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for=""><small><b>Niveli i eksperiences</b></small></label>
+                                    <select class="form-control" id="experience_level" name="experience_level">
+                                        <option value="" selected="selected">Zgjidhni nivelin e eksperiencës</option>
+                                        <option value="1">Student</option>
+                                        <option value="2">Little (0 - 2 years)</option>
+                                        <option value="3">Average (3 - 10 years)</option>
+                                        <option value="4">High (11+ years)</option>
+                                        <option value="5">Managerial</option>
+                                        <option value="6">Executive</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3 mt-3 row mx-auto">
+                                <div class="col-4">
+                                    <label for=""><small><b>Paga</b></small></label>
+                                    <select class="form-control" id="salary" name="salary"><option value="" selected="selected">Zgjidhni rrogën</option>
+                                        <option value="1">100 - 300</option>
+                                        <option value="2">300 - 400</option>
+                                        <option value="3">400 - 700</option>
+                                        <option value="4">700 - 1000</option>
+                                        <option value="5">1000 - 1500</option>
+                                        <option value="6">1500 - 2500</option>
+                                        <option value="7">2500 - 5000</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for=""><small><b>Zgjidh monedhen</b></small></label>
+                                    <select class="form-control" id="currency_id" name="currency_id">
+                                        <option value="" selected="selected">Zgjidh monedhën</option>
+                                        <option value="1">USD</option>
+                                        <option value="2">ALL</option>
+                                        <option value="3">EURO</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for=""><small><b>Profesioni</b></small></label>
+                                    <input type="text" class="form-control" placeholder="psh: Inxhinier">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border border-0 mb-4 shadow">
+                            <div class="card-header" style="border-radius: 10px 10px 0px 0px; background-color: #005a8c; color: white; font-size: 20px">
+                                Preferencat e pozicioneve te punes
+                            </div>
+
+                            <div class="col-md-12 mb-3 mt-3 row mx-auto">
+                                <div class="col-3">
+                                    <label for=""><small><b>Zgjidhni preference 1</b></small></label>
+                                    <select class="form-control" id="job_preference_3" name="job_preference_3">
+                                        <option value="" selected="selected">Zgjidhni preferencë</option>
+                                        <option value="1">Administrator rrjeti</option>
+                                        <option value="2">Administrim biznesi</option>
+                                        <option value="3">Agronom</option>
+                                        <option value="4">Arkeolog</option>
+                                        <option value="5">Arkitekt</option>
+                                        <option value="6">Artist</option>
+                                        <option value="7">Audit</option>
+                                        <option value="8">Biolog</option>
+                                        <option value="9">Diplomat</option>
+                                        <option value="10">Dizajner</option>
+                                        <option value="11">Ekonomist</option>
+                                        <option value="12">Farmacist</option>
+                                        <option value="13">Financier</option>
+                                        <option value="14">Fizikant</option>
+                                        <option value="15">Gjeograf</option>
+                                        <option value="16">Historian</option>
+                                        <option value="17">Informaticien</option>
+                                        <option value="18">Inxhinier</option>
+                                        <option value="19">Inxhinier elektrik</option>
+                                        <option value="20">Inxhinier elektronik</option>
+                                        <option value="21">Inxhinier hidro</option>
+                                        <option value="22">Inxhinier mekanik</option>
+                                        <option value="23">Inxhinier mjedisi</option>
+                                        <option value="24">Inxhinier ndertimi</option>
+                                        <option value="25">Inxhinier pyjor</option>
+                                        <option value="26">Inxhinier telekomunikacioni</option>
+                                        <option value="27">Jurist</option>
+                                        <option value="28">Kimist</option>
+                                        <option value="29">Linguistike</option>
+                                        <option value="30">Menaxhim</option>
+                                        <option value="31">Marketing</option>
+                                        <option value="32">Matematicien</option>
+                                        <option value="33">Mesues</option>
+                                        <option value="34">Mjek i pergjithshem</option>
+                                        <option value="35">Mjek i specializuar</option>
+                                        <option value="36">Perkthyes</option>
+                                        <option value="37">Programues</option>
+                                        <option value="38">Psikolog</option>
+                                        <option value="39">Punonjes social</option>
+                                        <option value="40">Shitje</option>
+                                        <option value="41">Shkenca politike</option>
+                                        <option value="42">Sociolog</option>
+                                        <option value="43">Sportist</option>
+                                        <option value="44">Statisticien</option>
+                                        <option value="45">Stomatolog</option>
+                                        <option value="46">Turizem</option>
+                                        <option value="47">Veteriner</option>
+                                        <option value="48">Informatike ekonomike</option>
+                                        <option value="49">Marredhenie me publikun dhe komunikim</option>
+                                        <option value="50">Infermier/ Ndihmesmjek</option>
+                                        <option value="51">Logjistike</option>
+                                        <option value="52">Sherbim Transporti dhe Shperndarje</option>
+                                        <option value="53">Shkenca te komunikimit</option>
+                                        <option value="54">Burime njerezore</option>
+                                        <option value="55">Operator</option>
+                                        <option value="56">Pedagog</option>
+                                        <option value="57">Specialist Prokurimi</option>
+                                        <option value="58">Sekretar/Asistent zyre</option>
+                                        <option value="59">Cilesi dhe Procedura</option>
+                                        <option value="60">Aktor</option>
+                                        <option value="61">Analist kredie</option>
+                                        <option value="62">Asistent Fluturimi</option>
+                                        <option value="63">Agjent Udhetimi</option>
+                                        <option value="64">Artizan</option>
+                                        <option value="65">Agjent Imobiliar</option>
+                                        <option value="66">Fotograf</option>
+                                        <option value="67">Topograf</option>
+                                        <option value="68">Analist sistemi</option>
+                                        <option value="69">Gazetar</option>
+                                        <option value="70">Inxhinier Civil</option>
+                                        <option value="71">Inxhinier Gjeologji/Miniera</option>
+                                        <option value="72">Inxhinier Nafte</option>
+                                        <option value="73">Specialist sigurimi</option>
+                                        <option value="74">Statisticien specialist </option>
+                                        <option value="75">Recepsionist</option>
+                                        <option value="76">Zolog</option>
+                                        <option value="77">Noter</option>
+                                        <option value="78">Menaxhim i Projekteve</option>
+                                        <option value="79">Menaxhim shitjeve</option>
+                                        <option value="80">Menaxhim i Projekteve</option>
+                                        <option value="81">Programues ne Web</option>
+                                        <option value="82">Trajnim dhe zhvillim</option>
+                                        <option value="83">Intervistues ne terren</option>
+                                        <option value="84">TIK - Teknologjia e Informacionit dhe Komunikacionit</option>
+                                        <option value="85">OSS - Sisteme te Mbeshtetjes se Veprimeve </option>
+                                        <option value="86">NCM - Kontrolli dhe Monitorimi i rrjetave</option>
+                                        <option value="87">CRM - Menaxhimi i marredhenieve me klientin</option>
+                                        <option value="88">Specialist per sisteme elektrike dhe elektro mekanike</option>
+                                        <option value="89">Inxhinieri Kimike</option>
+                                        <option value="90">Dizajn dhe Pikture</option>
+                                        <option value="91">Koordinim Projektesh</option>
+                                        <option value="92">Industria mekanike</option>
+                                        <option value="93">Asistente per Emision Televiziv</option>
+                                        <option value="94">Inxhiner sistemesh</option>
+                                        <option value="95">Projekt</option>
+                                        <option value="96">Inxhinier mekatronik</option>
+                                        <option value="97">Administrator te dhenash</option>
+                                        <option value="98">Specialist</option>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <label for=""><small><b>Zgjidhni preference 2</b></small></label>
+                                    <select class="form-control" id="job_preference_3" name="job_preference_3">
+                                        <option value="" selected="selected">Zgjidhni preferencë</option>
+                                        <option value="1">Administrator rrjeti</option>
+                                        <option value="2">Administrim biznesi</option>
+                                        <option value="3">Agronom</option>
+                                        <option value="4">Arkeolog</option>
+                                        <option value="5">Arkitekt</option>
+                                        <option value="6">Artist</option>
+                                        <option value="7">Audit</option>
+                                        <option value="8">Biolog</option>
+                                        <option value="9">Diplomat</option>
+                                        <option value="10">Dizajner</option>
+                                        <option value="11">Ekonomist</option>
+                                        <option value="12">Farmacist</option>
+                                        <option value="13">Financier</option>
+                                        <option value="14">Fizikant</option>
+                                        <option value="15">Gjeograf</option>
+                                        <option value="16">Historian</option>
+                                        <option value="17">Informaticien</option>
+                                        <option value="18">Inxhinier</option>
+                                        <option value="19">Inxhinier elektrik</option>
+                                        <option value="20">Inxhinier elektronik</option>
+                                        <option value="21">Inxhinier hidro</option>
+                                        <option value="22">Inxhinier mekanik</option>
+                                        <option value="23">Inxhinier mjedisi</option>
+                                        <option value="24">Inxhinier ndertimi</option>
+                                        <option value="25">Inxhinier pyjor</option>
+                                        <option value="26">Inxhinier telekomunikacioni</option>
+                                        <option value="27">Jurist</option>
+                                        <option value="28">Kimist</option>
+                                        <option value="29">Linguistike</option>
+                                        <option value="30">Menaxhim</option>
+                                        <option value="31">Marketing</option>
+                                        <option value="32">Matematicien</option>
+                                        <option value="33">Mesues</option>
+                                        <option value="34">Mjek i pergjithshem</option>
+                                        <option value="35">Mjek i specializuar</option>
+                                        <option value="36">Perkthyes</option>
+                                        <option value="37">Programues</option>
+                                        <option value="38">Psikolog</option>
+                                        <option value="39">Punonjes social</option>
+                                        <option value="40">Shitje</option>
+                                        <option value="41">Shkenca politike</option>
+                                        <option value="42">Sociolog</option>
+                                        <option value="43">Sportist</option>
+                                        <option value="44">Statisticien</option>
+                                        <option value="45">Stomatolog</option>
+                                        <option value="46">Turizem</option>
+                                        <option value="47">Veteriner</option>
+                                        <option value="48">Informatike ekonomike</option>
+                                        <option value="49">Marredhenie me publikun dhe komunikim</option>
+                                        <option value="50">Infermier/ Ndihmesmjek</option>
+                                        <option value="51">Logjistike</option>
+                                        <option value="52">Sherbim Transporti dhe Shperndarje</option>
+                                        <option value="53">Shkenca te komunikimit</option>
+                                        <option value="54">Burime njerezore</option>
+                                        <option value="55">Operator</option>
+                                        <option value="56">Pedagog</option>
+                                        <option value="57">Specialist Prokurimi</option>
+                                        <option value="58">Sekretar/Asistent zyre</option>
+                                        <option value="59">Cilesi dhe Procedura</option>
+                                        <option value="60">Aktor</option>
+                                        <option value="61">Analist kredie</option>
+                                        <option value="62">Asistent Fluturimi</option>
+                                        <option value="63">Agjent Udhetimi</option>
+                                        <option value="64">Artizan</option>
+                                        <option value="65">Agjent Imobiliar</option>
+                                        <option value="66">Fotograf</option>
+                                        <option value="67">Topograf</option>
+                                        <option value="68">Analist sistemi</option>
+                                        <option value="69">Gazetar</option>
+                                        <option value="70">Inxhinier Civil</option>
+                                        <option value="71">Inxhinier Gjeologji/Miniera</option>
+                                        <option value="72">Inxhinier Nafte</option>
+                                        <option value="73">Specialist sigurimi</option>
+                                        <option value="74">Statisticien specialist </option>
+                                        <option value="75">Recepsionist</option>
+                                        <option value="76">Zolog</option>
+                                        <option value="77">Noter</option>
+                                        <option value="78">Menaxhim i Projekteve</option>
+                                        <option value="79">Menaxhim shitjeve</option>
+                                        <option value="80">Menaxhim i Projekteve</option>
+                                        <option value="81">Programues ne Web</option>
+                                        <option value="82">Trajnim dhe zhvillim</option>
+                                        <option value="83">Intervistues ne terren</option>
+                                        <option value="84">TIK - Teknologjia e Informacionit dhe Komunikacionit</option>
+                                        <option value="85">OSS - Sisteme te Mbeshtetjes se Veprimeve </option>
+                                        <option value="86">NCM - Kontrolli dhe Monitorimi i rrjetave</option>
+                                        <option value="87">CRM - Menaxhimi i marredhenieve me klientin</option>
+                                        <option value="88">Specialist per sisteme elektrike dhe elektro mekanike</option>
+                                        <option value="89">Inxhinieri Kimike</option>
+                                        <option value="90">Dizajn dhe Pikture</option>
+                                        <option value="91">Koordinim Projektesh</option>
+                                        <option value="92">Industria mekanike</option>
+                                        <option value="93">Asistente per Emision Televiziv</option>
+                                        <option value="94">Inxhiner sistemesh</option>
+                                        <option value="95">Projekt</option>
+                                        <option value="96">Inxhinier mekatronik</option>
+                                        <option value="97">Administrator te dhenash</option>
+                                        <option value="98">Specialist</option>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <label for=""><small><b>Zgjidhni preference 3</b></small></label>
+                                    <select class="form-control" id="job_preference_3" name="job_preference_3">
+                                        <option value="" selected="selected">Zgjidhni preferencë</option>
+                                        <option value="1">Administrator rrjeti</option>
+                                        <option value="2">Administrim biznesi</option>
+                                        <option value="3">Agronom</option>
+                                        <option value="4">Arkeolog</option>
+                                        <option value="5">Arkitekt</option>
+                                        <option value="6">Artist</option>
+                                        <option value="7">Audit</option>
+                                        <option value="8">Biolog</option>
+                                        <option value="9">Diplomat</option>
+                                        <option value="10">Dizajner</option>
+                                        <option value="11">Ekonomist</option>
+                                        <option value="12">Farmacist</option>
+                                        <option value="13">Financier</option>
+                                        <option value="14">Fizikant</option>
+                                        <option value="15">Gjeograf</option>
+                                        <option value="16">Historian</option>
+                                        <option value="17">Informaticien</option>
+                                        <option value="18">Inxhinier</option>
+                                        <option value="19">Inxhinier elektrik</option>
+                                        <option value="20">Inxhinier elektronik</option>
+                                        <option value="21">Inxhinier hidro</option>
+                                        <option value="22">Inxhinier mekanik</option>
+                                        <option value="23">Inxhinier mjedisi</option>
+                                        <option value="24">Inxhinier ndertimi</option>
+                                        <option value="25">Inxhinier pyjor</option>
+                                        <option value="26">Inxhinier telekomunikacioni</option>
+                                        <option value="27">Jurist</option>
+                                        <option value="28">Kimist</option>
+                                        <option value="29">Linguistike</option>
+                                        <option value="30">Menaxhim</option>
+                                        <option value="31">Marketing</option>
+                                        <option value="32">Matematicien</option>
+                                        <option value="33">Mesues</option>
+                                        <option value="34">Mjek i pergjithshem</option>
+                                        <option value="35">Mjek i specializuar</option>
+                                        <option value="36">Perkthyes</option>
+                                        <option value="37">Programues</option>
+                                        <option value="38">Psikolog</option>
+                                        <option value="39">Punonjes social</option>
+                                        <option value="40">Shitje</option>
+                                        <option value="41">Shkenca politike</option>
+                                        <option value="42">Sociolog</option>
+                                        <option value="43">Sportist</option>
+                                        <option value="44">Statisticien</option>
+                                        <option value="45">Stomatolog</option>
+                                        <option value="46">Turizem</option>
+                                        <option value="47">Veteriner</option>
+                                        <option value="48">Informatike ekonomike</option>
+                                        <option value="49">Marredhenie me publikun dhe komunikim</option>
+                                        <option value="50">Infermier/ Ndihmesmjek</option>
+                                        <option value="51">Logjistike</option>
+                                        <option value="52">Sherbim Transporti dhe Shperndarje</option>
+                                        <option value="53">Shkenca te komunikimit</option>
+                                        <option value="54">Burime njerezore</option>
+                                        <option value="55">Operator</option>
+                                        <option value="56">Pedagog</option>
+                                        <option value="57">Specialist Prokurimi</option>
+                                        <option value="58">Sekretar/Asistent zyre</option>
+                                        <option value="59">Cilesi dhe Procedura</option>
+                                        <option value="60">Aktor</option>
+                                        <option value="61">Analist kredie</option>
+                                        <option value="62">Asistent Fluturimi</option>
+                                        <option value="63">Agjent Udhetimi</option>
+                                        <option value="64">Artizan</option>
+                                        <option value="65">Agjent Imobiliar</option>
+                                        <option value="66">Fotograf</option>
+                                        <option value="67">Topograf</option>
+                                        <option value="68">Analist sistemi</option>
+                                        <option value="69">Gazetar</option>
+                                        <option value="70">Inxhinier Civil</option>
+                                        <option value="71">Inxhinier Gjeologji/Miniera</option>
+                                        <option value="72">Inxhinier Nafte</option>
+                                        <option value="73">Specialist sigurimi</option>
+                                        <option value="74">Statisticien specialist </option>
+                                        <option value="75">Recepsionist</option>
+                                        <option value="76">Zolog</option>
+                                        <option value="77">Noter</option>
+                                        <option value="78">Menaxhim i Projekteve</option>
+                                        <option value="79">Menaxhim shitjeve</option>
+                                        <option value="80">Menaxhim i Projekteve</option>
+                                        <option value="81">Programues ne Web</option>
+                                        <option value="82">Trajnim dhe zhvillim</option>
+                                        <option value="83">Intervistues ne terren</option>
+                                        <option value="84">TIK - Teknologjia e Informacionit dhe Komunikacionit</option>
+                                        <option value="85">OSS - Sisteme te Mbeshtetjes se Veprimeve </option>
+                                        <option value="86">NCM - Kontrolli dhe Monitorimi i rrjetave</option>
+                                        <option value="87">CRM - Menaxhimi i marredhenieve me klientin</option>
+                                        <option value="88">Specialist per sisteme elektrike dhe elektro mekanike</option>
+                                        <option value="89">Inxhinieri Kimike</option>
+                                        <option value="90">Dizajn dhe Pikture</option>
+                                        <option value="91">Koordinim Projektesh</option>
+                                        <option value="92">Industria mekanike</option>
+                                        <option value="93">Asistente per Emision Televiziv</option>
+                                        <option value="94">Inxhiner sistemesh</option>
+                                        <option value="95">Projekt</option>
+                                        <option value="96">Inxhinier mekatronik</option>
+                                        <option value="97">Administrator te dhenash</option>
+                                        <option value="98">Specialist</option>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <label for=""><small><b>Ke degjuar per ne?</b></small></label>
+                                    <select class="form-control" id="referal" name="referal">
+                                        <option value="" selected="selected">Zgjidhni referuesin</option>
+                                        <option value="1">Motor kërkimi ( google,yahoo etj)</option>
+                                        <option value="2">Nga një i/e njohur</option>
+                                        <option value="3">Panair </option>
+                                        <option value="4">Trajnim / Seminare</option>
+                                        <option value="5">Rrjete Sociale </option>
+                                        <option value="6">nga faqja www.dm-consulting.biz</option>
+                                        <option value="7">Nga fletepalosjet </option>
+                                        <option value="8">Media ( TV, Radio)</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
 
                         <br>
@@ -298,6 +731,7 @@
             </div>
         </div>
     </div>
+
 <!--Footer-->
 <?php include 'partials/footer.php'; ?>
 

@@ -98,7 +98,7 @@
             <div class="row">
                 <div class="col-md-12 mt-5 text-center">
                     <h1 style="color: #004085">Faqja ime</h1>
-                    <h5><a style="color: #0056b3" href="">Kreu</a> > Profili</h5>
+                    <h5><a style="color: #0056b3" href="index.php">Kreu</a> > Profili</h5>
                 </div>
             </div>
 
