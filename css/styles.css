@@ -3,6 +3,10 @@ a {
     text-decoration: none !important;
 }
 
+.page-container {
+    width: 85%;
+}
+
 
 
 
@@ -28,6 +32,7 @@ a {
     background-color: #1775b885;
 }
 
+/*personal_data page styles*/
 .search-container-transparent {
     width: 1200px;
     opacity: 0.7;

@@ -300,7 +300,7 @@
 <br>
 
 <!--Format-->
-<div class="mb-3 container-fluid" style="width:85%">
+<div class="mb-3 container-fluid page-container">
     <div class="row">
 
         <!-- Forma Kerkimi i avancuar -->

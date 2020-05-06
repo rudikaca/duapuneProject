@@ -1,6 +1,6 @@
 <!--Navbar -->
 <nav class="navbar bg-dark fixed-top navbar-expand-sm" role="navigation">
-    <a class="navbar-brand text-white" href="duapune.php">♚ duapune.com</a>
+    <a class="navbar-brand text-white" href="index.php">♚ duapune.com</a>
     <ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link text-white" href="#"><strong>Rreth nesh</strong></a>
@@ -43,8 +43,8 @@
                 <span title="Rudin"> Rudin</span>
             </a>
             <div class="dropdown-menu">
-                <a href="" class="dropdown-item">Llogaria ime</a>
-                <a href="" class="dropdown-item">Të dhëna personale</a>
+                <a href="../my_account.php" class="dropdown-item">Llogaria ime</a>
+                <a href="../personal_data.php" class="dropdown-item">Të dhëna personale</a>
                 <a href="" class="dropdown-item">Ndrysho fjalëkalimin</a>
                 <a href="" class="dropdown-item" target="_blank">Edukim dhe Këshilla</a>
                 <a href="" class="dropdown-item">Punët e Sygjeruara</a>
