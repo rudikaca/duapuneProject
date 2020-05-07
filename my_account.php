@@ -18,11 +18,12 @@
 <!--Navbar -->
 <?php include 'partials/header.php'; ?>
 
-<div class="" style=" background-color: #f4f8fa;">
+<div class="container-fluid" style=" background-color: #f4f8fa;">
 
     <?php include 'partials/header_search.php'; ?>
 
     <!--Faqja ime text-->
+
     <div class="row">
         <div class="mb-0 col-md-12 container" style="background-color: #f4f8fa">
             <div class="row">

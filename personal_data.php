@@ -18,7 +18,8 @@
 <!--Navbar -->
 <?php include 'partials/header.php'; ?>
 
-<div class="" style="background-color: #f4f8fa;">
+
+<div class="container-fluid" style="background-color: #f4f8fa;">
 
     <?php include 'partials/header_search.php'; ?>
 
@@ -661,6 +662,7 @@
             </div>
         </div>
     </div>
+</div>
 
 <!--Footer-->
 <?php include 'partials/footer.php'; ?>
