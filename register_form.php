@@ -35,10 +35,10 @@
                     <input class="form-control" placeholder="Fjalëkalim" name="password" type="password" value="" id="password">
                     <label for="password_confirmation" style="font-size: 12px">Përsërit fjalëkalimin *</label>
                     <input class="form-control" placeholder="Përsërit fjalëkalimin" name="password_confirmation" type="password" value="" id="password_confirmation">
-                    <div class="checkbox checkbox-primary">
+                    <div class="m-2 checkbox checkbox-primary">
                         <input id="terms_of_usage" name="terms_of_usage" type="checkbox" value="accepted">
-                        <label for="terms_of_usage">Unë i pranoj kushtet e përdorimit *</label>
-                        <a href="" target="_blank" style="display: inline-block; text-decoration: underline;">Më shumë</a>
+                        <label class="mr-5" for="terms_of_usage">Unë i pranoj kushtet e përdorimit *</label>
+                        <a c href="" target="_blank" style="display: inline-block; text-decoration: underline;">Më shumë</a>
                     </div>
                     <input class="btn-primary" style="width: 100%" type="submit" value="Regjistrohuni">
                 </form>
@@ -62,9 +62,9 @@
                     <input class="form-control" placeholder="Fjalëkalim" name="password" type="password" value="" id="password">
                     <label for="password_confirmation" style="font-size: 12px">Përsërit fjalëkalimin *</label>
                     <input class="form-control" placeholder="Përsërit fjalëkalimin" name="password_confirmation" type="password" value="" id="password_confirmation">
-                    <div class="checkbox checkbox-primary">
+                    <div class="m-2 checkbox checkbox-primary">
                         <input id="terms_of_usage2" name="terms_of_usage2" type="checkbox" value="accepted">
-                        <label for="terms_of_usage2">Unë i pranoj kushtet e përdorimit *</label>
+                        <label class="mr-5" for="terms_of_usage2">Unë i pranoj kushtet e përdorimit *</label>
                         <a href="" target="_blank" style="display: inline-block; text-decoration: underline;">Më shumë</a>
                     </div>
                     <input class="btn-primary" style="width: 100%" type="submit" value="Regjistrohuni">
