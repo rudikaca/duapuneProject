@@ -13,7 +13,7 @@
                     <?php
                     foreach ($jobItem['proffesions'] as $proffesion) {
                     ?>
-                        <a href="<?php echo $proffesion['href']; ?>" target="_blank" type="button" class="btn btn-outline-primary btn-sm"><?php echo $proffesion['title']; ?></a>
+                        <a href="<?php echo $proffesion['id']; ?>" target="_blank" type="button" class="btn btn-outline-primary btn-sm"><?php echo $proffesion['name']; ?></a>
                     <?php
                     }
                     ?>

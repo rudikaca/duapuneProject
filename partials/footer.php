@@ -137,3 +137,5 @@
     <!-- Copyright -->
 
 </footer>
+
+<?php include 'db/db-close.php'; ?>
