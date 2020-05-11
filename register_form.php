@@ -10,6 +10,54 @@
 </head>
 <body>
 
+<?php
+
+if (!empty($_POST)) {
+    $companyName = $_POST['company_name'];
+    $business_number = $_POST['business_number'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $password = $_POST['password'];
+    $password_confirmation = $_POST['password_confirmation'];
+
+
+// Validate data
+
+    $errors = [];
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors['email'] = 'Invalid email format';
+    }
+    if ($password != $password_confirmation) {
+        $errors['password_confirmation'] = 'Passwords are not the same!';
+    }
+// end validate data
+
+
+    if (empty($errors)) {
+        // insert data to db
+
+        $sql = "INSERT INTO users (email, phone, password) VALUES ('$email', '$phone', '$password')";
+
+        if ($conn->query($sql) === TRUE) {
+            header('location: personal_data.php');
+        } else {
+            $errors['global'] = $conn->error;
+        }
+        // end insert data to db
+    }
+
+}
+
+?>
+
+
+
+
+
+
+
+
 <!--Navbar -->
 <?php include 'partials/header.php'; ?>
 <hr>
@@ -21,7 +69,14 @@
         <div class="row">
             <div class="col-md-5 register-form-1">
                 <h2 class="main-title">Punëdhënës? <small>/ Kompani</small></h2>
-                <form method="POST" action="https://duapune.com/register/employer" accept-charset="UTF-8">
+
+                <?php if(isset($errors['global'])) { ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?php echo $errors['global']; ?>
+                    </div>
+                <?php } ?>
+
+                <form method="POST" action="register_form.php" accept-charset="UTF-8">
                     <input name="_token" type="hidden" value="Msb5OEzqhmwj7SBlt1QYFHh9FIuPYHcNTN4IerFg">
                     <label for="company_name">Emri i kompanisë *</label>
                     <input class="form-control" placeholder="Emri i kompanisë" name="company_name" type="text" id="company_name">
@@ -29,12 +84,22 @@
                     <input class="form-control" placeholder="NIPT" name="business_number" type="text" id="business_number">
                     <label for="email">E-mail *</label>
                     <input class="form-control" placeholder="E-mail" name="email" type="email" id="email">
-                    <label for="phone">Telefon *</label>
+                    <?php if(isset($errors['email'])) { ?>
+                        <span class="text-danger"><?php echo $errors['email']; ?></span>
+                    <?php } ?>
+
+
+                    <br><label for="phone">Telefon *</label>
                     <input class="form-control" placeholder="Telefon" name="phone" type="text" id="phone">
                     <label for="password" style="font-size: 12px">Fjalëkalim *</label>
                     <input class="form-control" placeholder="Fjalëkalim" name="password" type="password" value="" id="password">
                     <label for="password_confirmation" style="font-size: 12px">Përsërit fjalëkalimin *</label>
                     <input class="form-control" placeholder="Përsërit fjalëkalimin" name="password_confirmation" type="password" value="" id="password_confirmation">
+                    <?php if(isset($errors['password_confirmation'])) { ?>
+                        <span class="text-danger"><?php echo $errors['password_confirmation']; ?></span>
+                    <?php } ?>
+
+
                     <div class="m-2 checkbox checkbox-primary">
                         <input id="terms_of_usage" name="terms_of_usage" type="checkbox" value="accepted">
                         <label class="mr-5" for="terms_of_usage">Unë i pranoj kushtet e përdorimit *</label>

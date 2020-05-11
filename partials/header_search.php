@@ -43,7 +43,7 @@
                                     <div class="col-lg-3 col-md-3 col-sm-12 p-0">
                                         <input class="form-control search-slt" placeholder="Vendndodhje" name="city" type="text" value="">
                                     </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0 ml-auto">
+                                    <div class="col-lg-3 col-md-3 col-sm-12 p-0 ">
                                         <button type="submit" class="btn btn-danger w-100">Kërko</button>
                                     </div>
                                 </div>

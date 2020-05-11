@@ -1,5 +1,6 @@
 <?php
 
+
 $SQL = '
 SELECT
 	jobs.*, cities.`name` AS cityName
@@ -27,7 +28,6 @@ foreach ($jobItems as $index => $jobItem) {
         "name" => $jobItem['cityName']
     ];
 }
-
-//echo json_encode($jobItems); die;
-
 ?>
+
+

@@ -34,7 +34,7 @@
             </div>
 
             <!--Format-->
-            <div class="mb-3 pl-5 pr-5 container-fluid page-container">
+            <div class="mb-3">
                 <div class="row">
                     <div class="col-12 mt-5">
                         <div class="container">
@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="card-body" >
                                     <div class="row">
-                                        <div class="col-3">
+                                        <div class="col-md-3 col-sm-12">
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
@@ -59,7 +59,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-md-3 col-sm-12">
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
@@ -74,7 +74,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-md-3 col-sm-12">
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
@@ -87,7 +87,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-md-3 col-sm-12">
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
@@ -109,7 +109,7 @@
                                 </div>
                                 <div class="card-body" >
                                     <div class="row">
-                                        <div class="col-3">
+                                        <div class="col-md-3 col-sm-12">
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
@@ -122,7 +122,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-md-3 col-sm-12">
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
@@ -135,7 +135,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-md-3 col-sm-12">
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
@@ -148,7 +148,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-md-3 col-sm-12">
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
@@ -170,7 +170,7 @@
                                 </div>
                                 <div class="card-body" >
                                     <div class="row">
-                                        <div class="col-3">
+                                        <div class="col-md-3 col-sm-12">
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
@@ -183,7 +183,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-md-3 col-sm-12">
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
@@ -196,7 +196,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-md-3 col-sm-12">
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
@@ -209,7 +209,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-md-3 col-sm-12">
                                             <div class="border border-0  card bg-light mb-3" style="max-width: 18rem;">
 
                                                 <div class="w-100 card-body bg-white disabled">
@@ -229,8 +229,8 @@
                             <br>
                             <h2 class="mb-5 text-center site-name" style="color: #0092cc">Keni nevoje për ndihmë?</h2>
                             <div class="mb-3 text-center">
-                                <button class="btn btn-primary shadow" onclick="" style="padding: 10px 32px 10px 32px;background-color: #0092cc;margin-right: 10px;" type="button">Flisni me duapune.com</button>
-                                <button class="btn btn-primary shadow" style="padding: 10px 32px 10px 32px;background-color: #FF9B54;margin-left: 10px;" onclick="" type="button">Ndihmë dhe Suport</button>
+                                <button class="col-md-3 col-sm-12 m-5 btn btn-primary shadow" onclick="" style="padding: 10px 32px 10px 32px;background-color: #0092cc;margin-right: 10px;" type="button">Flisni me duapune.com</button>
+                                <button class="col-sm-3 m-3 btn btn-primary shadow" style="padding: 10px 32px 10px 32px;background-color: #FF9B54;margin-left: 10px;" onclick="" type="button">Ndihmë dhe Suport</button>
                             </div>
                         </div>
                     </div>
