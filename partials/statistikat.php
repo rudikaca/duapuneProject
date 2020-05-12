@@ -15,7 +15,7 @@ $SQL = 'SELECT
         FROM
             users 
         WHERE
-            type = "punekerkues"
+            type_user = "punekerkues"
             AND deleted = 0;';
 $punekerkuesTotal = $conn->query($SQL)->fetch_assoc();
 
@@ -25,7 +25,7 @@ $SQL = 'SELECT
         FROM
             users 
         WHERE
-            type = "punedhenes"
+            type_user = "punedhenes"
             AND deleted = 0;';
 $punedhenesTotal = $conn->query($SQL)->fetch_assoc();
 
