@@ -21,7 +21,7 @@
 <!-- Head (Regjistrohu / Identifikohu)-->
 <div class="text-center mt-5" style="height: 160px; background: #0099cb;">
     <div class="row" style="width: 100%;">
-        <div class="col-sm-6 ">
+        <div class="col-md-6 col-sm-12">
             <div class="bg-#0099cb">
                 <div class="card-body pt-5">
                     <div class="btn btn-lg btn-outline-light stretched-link" data-toggle="modal" data-target="#modal_punekerkues"><i class="fas fa-user-tie"></i> Punekerkues</div>
@@ -156,7 +156,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-md-6 col-sm-12">
             <div class="bg-#0099cb">
                 <div class="card-body pt-5">
                     <div class="btn btn-lg btn-outline-light stretched-link" data-toggle="modal" data-target="#modal_punedhenes"><i class="fas fa-briefcase"></i> Punedhenes</div>

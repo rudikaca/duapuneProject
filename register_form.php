@@ -10,72 +10,11 @@
 </head>
 <body>
 
-<?php
-
-if (!empty($_POST)) {
-    $company_name = $_POST['company_name'];
-    $business_number = $_POST['business_number'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $password_1 = $_POST['password_1'];
-    $password_confirmation = $_POST['password_confirmation'];
 
 
-
-    // Validate data
-    $errors = [];
-
-    if (empty($company_name)) {
-        $errors['company_name'] = 'Company name is required';
-    }
-    if (empty($business_number)) {
-        $errors['business_number'] = 'Business number is required';
-    }
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors['email'] = 'Invalid email format';
-    }
-
-    $sql = "SELECT COUNT(id) as total FROM users WHERE email = '$email';";
-    $countUsers = $conn->query($sql)->fetch_assoc();
-    if($countUsers['total'] > 0) {
-        $errors['email'] = 'Email already exists! Please type another email';
-    }
-
-    if (empty($phone)) {
-        $errors['phone'] = 'Invalid phone format';
-    }
-    if (empty($password_1)) {
-        $errors['password_1'] = 'Password is required';
-    }
-    if ($password_1 != $password_confirmation) {
-        $errors['password_confirmation'] = 'The two passwords do not match!';
-    }
-    // end validate data
-
-
-
-    //if there are no errors, save user to database
-    if (empty($errors)) {
-
-        $password = md5($password_1);//encrypt password before storing in db (security)
-
-        // insert data to db
-        $sql = "INSERT INTO users (company_name, business_number, email, phone, type_user , password ) 
-                  VALUES ('$company_name', '$business_number', '$email', '$phone', 'punedhenes', '$password')";
-
-        if ($conn->query($sql) === TRUE) {
-            header('location: personal_data.php');
-        } else {
-            $errors['global'] = $conn->error;
-        }
-        // end insert data to db
-    }
-
-}
-
-?>
-
-
+<!-- START PHP LOGIC FOR REGISTER -->
+<?php include 'process/handle_register.php'; ?>
+<!-- END PHP LOGIC FOR REGISTER -->
 
 
 
@@ -99,44 +38,53 @@ if (!empty($_POST)) {
                 <?php } ?>
                 <!-- Display SQL errors -->
 
+                <!--Punëdhënës-->
                 <form method="POST" action="register_form.php" accept-charset="UTF-8">
-                    <input name="_token" type="hidden" value="Msb5OEzqhmwj7SBlt1QYFHh9FIuPYHcNTN4IerFg">
-                    <label for="company_name">Emri i kompanisë *</label>
-                    <input class="form-control" placeholder="Emri i kompanisë" name="company_name" type="text" id="company_name" value="<?php echo ( isset($company_name) ? $company_name : '' ); ?>">
+
+                    <input name="user_type" type="hidden" value="punedhenes">
+
+                    <label for="company_name"><small><b>Emri i kompanisë *</b></small></label>
                     <?php if(isset($errors['company_name'])) { ?>
-                        <span class="text-danger"><?php echo $errors['company_name']; ?></span>
+                        <span class="float-right text-danger"><small><b><?php echo $errors['company_name']; ?></b></small></span>
                     <?php } ?>
+                    <input class="form-control" placeholder="Emri i kompanisë" name="company_name" type="text" id="company_name" value="<?php echo ( isset($company_name) && ($user_type == 'punedhenes') ? $company_name : '' ); ?>">
 
-                    <br><label for="business_number">NIPT *</label> <i>Nëse ju jeni një kompani e huaj ju lutem <a href="">Na kontaktoni</a></i>
-                    <input class="form-control" placeholder="NIPT" name="business_number" type="text" id="business_number" value="<?php echo (isset($business_number) ? $business_number : ''); ?>">
+
+                    <label for="business_number"><small><b>NIPT *</b></small></label>
                     <?php if(isset($errors['business_number'])) { ?>
-                        <span class="text-danger"><?php echo $errors['business_number']; ?></span>
+                        <span class="float-right text-danger"><small><b><?php echo $errors['business_number']; ?></b></small></span>
                     <?php } ?>
+                    <input class="form-control" placeholder="NIPT" name="business_number" type="text" id="business_number" value="<?php echo (isset($business_number) ? $business_number : ''); ?>">
 
-                    <br><label for="email">Email *</label>
-                    <input class="form-control" placeholder="E-mail" name="email" type="email" id="email" value="<?php echo (isset($email) ? $email : ''); ?>">
-                    <?php if(isset($errors['email'])) { ?>
-                        <span class="text-danger"><?php echo $errors['email']; ?></span>
+
+                    <label for="email"><small><b>Email *</b></small></label>
+                    <?php if(isset($errors['email']) && ($user_type == 'punedhenes')) { ?>
+                        <span class="float-right text-danger"><small><b><?php echo $errors['email']; ?></b></small></span>
                     <?php } ?>
+                    <input class="form-control" placeholder="E-mail" name="email" type="email" id="email" value="<?php echo (isset($email) && ($user_type == 'punedhenes') ? $email : ''); ?>">
 
 
-                    <br><label for="phone">Telefon *</label>
-                    <input class="form-control" placeholder="Telefon" name="phone" type="text" id="phone" value="<?php echo (isset($phone) ? $phone : ''); ?>">
+
+                    <label for="phone"><small><b>Telefon *</b></small></label>
                     <?php if(isset($errors['phone'])) { ?>
-                        <span class="text-danger"><?php echo $errors['phone']; ?></span>
+                        <span class="float-right text-danger"><small><b><?php echo $errors['phone']; ?></b></small></span>
                     <?php } ?>
+                    <input class="form-control" placeholder="Shembull: 0694567345" name="phone" type="text" id="phone" value="<?php echo (isset($phone) ? $phone : ''); ?>">
 
-                    <br><label for="password_1" style="font-size: 12px">Fjalëkalim *</label>
-                    <input class="form-control" placeholder="Fjalëkalim" name="password_1" type="password" id="password_1">
-                    <?php if(isset($errors['password_1'])) { ?>
-                        <span class="text-danger"><?php echo $errors['password_1']; ?></span>
+
+                    <label for="password"><small><b>Fjalëkalim *</b></small></label>
+                    <?php if(isset($errors['password']) && ($user_type == 'punedhenes')) { ?>
+                        <span class="float-right text-danger"><small><b><?php echo $errors['password']; ?></b></small></span>
                     <?php } ?>
+                    <input class="form-control" placeholder="Fjalëkalim" name="password" type="password" id="password">
 
-                    <br><label for="password_confirmation" style="font-size: 12px">Përsërit fjalëkalimin *</label>
+
+                    <label for="password_confirmation"><small><b>Përsërit fjalëkalimin *</b></small></label>
+                    <?php if(isset($errors['password_confirmation']) && ($user_type == 'punedhenes')) { ?>
+                        <span class="float-right text-danger"><small><b><?php echo $errors['password_confirmation']; ?></b></small></span>
+                    <?php } ?>
                     <input class="form-control" placeholder="Përsërit fjalëkalimin" name="password_confirmation" type="password" id="password_confirmation">
-                    <?php if(isset($errors['password_confirmation'])) { ?>
-                        <span class="text-danger"><?php echo $errors['password_confirmation']; ?></span>
-                    <?php } ?>
+
 
 
                     <div class="m-2 checkbox checkbox-primary">
@@ -147,25 +95,55 @@ if (!empty($_POST)) {
                     <input class="btn-primary" style="width: 100%" type="submit" value="Regjistrohuni">
                 </form>
             </div>
+
             <div class="col-md-2">
                 <div class="vertical-line"></div>
             </div>
+
+            <!--Punëkërkues-->
             <div class="col-md-5 register-form-2">
                 <h2 class="main-title">Punëkërkues?
                     <small>/ Individ</small>
                 </h2>
-                <form method="POST" action="https://duapune.com/register/jobseeker" accept-charset="UTF-8">
-                    <input name="_token" type="hidden" value="Msb5OEzqhmwj7SBlt1QYFHh9FIuPYHcNTN4IerFg">
-                    <label for="first_name">Emri *</label>
-                    <input class="form-control" placeholder="Emri" name="first_name" type="text" id="first_name">
-                    <label for="last_name">Mbiemri *</label>
-                    <input class="form-control" placeholder="Mbiemri" name="last_name" type="text" id="last_name">
-                    <label for="email">E-mail *</label>
-                    <input class="form-control" placeholder="E-mail" name="email" type="email" id="email">
-                    <label for="password" style="font-size: 12px">Fjalëkalim *</label>
+                <form method="POST" action="register_form.php" accept-charset="UTF-8">
+
+                    <input name="user_type" type="hidden" value="punekerkues">
+
+                    <label for="first_name"><small><b>Emri *</b></small></label>
+                    <?php if(isset($errors['first_name'])) { ?>
+                        <span class="float-right text-danger"><small><b><?php echo $errors['first_name']; ?></b></small></span>
+                    <?php } ?>
+                    <input class="form-control" placeholder="Emri" name="first_name" type="text" id="first_name" value="<?php echo ( isset($first_name) ? $first_name : '' ); ?>">
+
+
+                    <label for="last_name"><small><b>Mbiemri *</b></small></label>
+                    <?php if(isset($errors['last_name'])) { ?>
+                        <span class="float-right text-danger"><small><b><?php echo $errors['last_name']; ?></b></small></span>
+                    <?php } ?>
+                    <input class="form-control" placeholder="Mbiemri" name="last_name" type="text" id="last_name" value="<?php echo (isset($last_name) ? $last_name : ''); ?>">
+
+
+                    <label for="email"><small><b>E-mail *</b></small></label>
+                    <?php if(isset($errors['email']) && ($user_type == 'punekerkues' )) { ?>
+                        <span class="float-right text-danger"><small><b><?php echo $errors['email']; ?></b></small></span>
+                    <?php } ?>
+                    <input class="form-control" placeholder="E-mail" name="email" type="email" id="email" value="<?php echo (isset($email) && ($user_type == 'punekerkues') ? $email : ''); ?>">
+
+
+                    <label for="password"><small><b>Fjalëkalim *</b></small></label>
+                    <?php if(isset($errors['password']) && ($user_type == 'punekerkues')) { ?>
+                        <span class="float-right text-danger"><small><b><?php echo $errors['password']; ?></b></small></span>
+                    <?php } ?>
                     <input class="form-control" placeholder="Fjalëkalim" name="password" type="password" value="" id="password">
-                    <label for="password_confirmation" style="font-size: 12px">Përsërit fjalëkalimin *</label>
+
+
+                    <label for="password_confirmation"><small><b>Përsërit fjalëkalimin *</b></small></label>
+                    <?php if(isset($errors['password_confirmation']) && ($user_type == 'punekerkues')) { ?>
+                        <span class="float-right text-danger"><small><b><?php echo $errors['password_confirmation']; ?></b></small></span>
+                    <?php } ?>
                     <input class="form-control" placeholder="Përsërit fjalëkalimin" name="password_confirmation" type="password" value="" id="password_confirmation">
+
+
                     <div class="m-2 checkbox checkbox-primary">
                         <input id="terms_of_usage2" name="terms_of_usage2" type="checkbox" value="accepted">
                         <label class="mr-5" for="terms_of_usage2">Unë i pranoj kushtet e përdorimit *</label>

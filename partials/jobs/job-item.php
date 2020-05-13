@@ -1,9 +1,9 @@
 <div class="card col-12 mb-1 job-item <?php if($jobItem['promotion'] == true) echo 'job-item-promotion'; ?>">
     <div class="row no-gutters">
-        <div class="col-1">
+        <div class="col-md-1 col-sm-12">
             <img src="<?php echo $jobItem['companyLogo']; ?>" class="card-img rounded-circle logo" alt="foto">
         </div>
-        <div class="col-8">
+        <div class="col-md-8 col-sm-12">
             <div class="card-body">
                 <div class="card-text"><?php echo $jobItem['title']; ?></div>
                 <div class="card-text">
@@ -20,7 +20,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-3">
+        <div class="col-md-3 col-sm-12">
             <div class="card-body">
                 <div class="card-text">
                     <small class="text-muted">
