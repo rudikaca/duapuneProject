@@ -46,7 +46,7 @@
                 <li class="nav-item dropdown navbar-right">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardroplogin" data-hover="dropdown" data-toggle="dropdown">
                         <img src="img/202.jpg" id="imglogin" style="width: 30px; height: 30px;" class="card-img rounded-circle logo" alt="foto">
-                        <span title="Rudin"> Rudin</span>
+                        <span title="Rudin"> <?php echo json_encode($_SESSION); ?></span>
                     </a>
                     <div class="dropdown-menu">
                         <a href="../my_account.php" class="dropdown-item">Llogaria ime</a>
@@ -54,7 +54,7 @@
                         <a href="../change_password.php" class="dropdown-item">Ndrysho fjalëkalimin</a>
                         <a href="" class="dropdown-item" target="_blank">Edukim dhe Këshilla</a>
                         <a href="" class="dropdown-item">Punët e Sygjeruara</a>
-                        <a href="" class="dropdown-item">Dilni</a>
+                        <a href="process/logout.php" class="dropdown-item">Dilni</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown navbar-right">

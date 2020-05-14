@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+
+
 if (!empty($_POST)) {
 
     $email = $_POST['email'];
@@ -12,12 +15,13 @@ if (!empty($_POST)) {
 
         $loggedUser = $loggedUser->fetch_assoc();
 
-        echo json_encode($loggedUser);
-        die();
+        $_SESSION['email'] = $loggedUser;
+        $_SESSION['success'] = "You are now logged in";
+        header('location: index.php');
+
     }else {
-        $errors['loginError'] = 'login failed!';
+        $errors['loginError'] = 'Kombinimi username/password eshte i gabuar!';
     }
 }
-
 
 ?>
