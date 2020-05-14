@@ -15,7 +15,7 @@ if (!empty($_POST)) {
 
         $loggedUser = $loggedUser->fetch_assoc();
 
-        $_SESSION['email'] = $loggedUser;
+        $_SESSION['user'] = $loggedUser;
         $_SESSION['success'] = "You are now logged in";
         header('location: index.php');
 

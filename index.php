@@ -525,26 +525,28 @@
                 ?>
 
             </div>
+
+<!--            <div class="">-->
+<!--                <button onclick="typeWriter()">Click me</button>-->
+<!--                <p id="demo"></p>-->
+<!--                <script>-->
+<!--                    var i = 0;-->
+<!--                    var txt = 'Lorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blabla.';-->
+<!--                    var speed = 100;-->
+<!---->
+<!--                    function typeWriter() {-->
+<!--                        if (i < txt.length) {-->
+<!--                            document.getElementById("demo").innerHTML += txt.charAt(i);-->
+<!--                            i++;-->
+<!--                            setTimeout(typeWriter, speed);-->
+<!--                        }-->
+<!--                    }-->
+<!--                </script>-->
+<!--            </div>-->
         </div>
 
-        <div class="content">
-            <!-- notification message -->
-            <?php if (isset($_SESSION['success'])) : ?>
-                <div class="error success" >
-                    <h3>
-                        <?php
-                        echo $_SESSION['success'];
-                        unset($_SESSION['success']);
-                        ?>
-                    </h3>
-                </div>
-            <?php endif ?>
 
-            <!-- logged in user information -->
-            <?php  if (isset($_SESSION['email'])) : ?>
-                <p>Welcome <strong><?php echo $_SESSION['email']; ?></strong></p>
-            <?php endif ?>
-        </div>
+
 
         <!--Forma Identifikohu-->
         <div class="col-sm-12 col-md-3">

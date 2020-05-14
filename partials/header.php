@@ -43,20 +43,26 @@
 
             <!-- login-->
             <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item dropdown navbar-right">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardroplogin" data-hover="dropdown" data-toggle="dropdown">
-                        <img src="img/202.jpg" id="imglogin" style="width: 30px; height: 30px;" class="card-img rounded-circle logo" alt="foto">
-                        <span title="Rudin"> <?php echo json_encode($_SESSION); ?></span>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="../my_account.php" class="dropdown-item">Llogaria ime</a>
-                        <a href="../personal_data.php" class="dropdown-item">Të dhëna personale</a>
-                        <a href="../change_password.php" class="dropdown-item">Ndrysho fjalëkalimin</a>
-                        <a href="" class="dropdown-item" target="_blank">Edukim dhe Këshilla</a>
-                        <a href="" class="dropdown-item">Punët e Sygjeruara</a>
-                        <a href="process/logout.php" class="dropdown-item">Dilni</a>
-                    </div>
-                </li>
+                <?php if (isset($_SESSION['user'])) { ?>
+                    <li class="nav-item dropdown navbar-right">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardroplogin" data-hover="dropdown" data-toggle="dropdown">
+                            <img src="img/202.jpg" id="imglogin" style="width: 30px; height: 30px;" class="card-img rounded-circle logo" alt="foto">
+                            <span title="Rudin">
+                                <?php echo $_SESSION['user']['first_name'] ?>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="../my_account.php" class="dropdown-item">Llogaria ime</a>
+                            <a href="../personal_data.php" class="dropdown-item">Të dhëna personale</a>
+                            <a href="../change_password.php" class="dropdown-item">Ndrysho fjalëkalimin</a>
+                            <a href="" class="dropdown-item" target="_blank">Edukim dhe Këshilla</a>
+                            <a href="" class="dropdown-item">Punët e Sygjeruara</a>
+                            <?php if (isset($_SESSION['user'])) { ?>
+                                <a href="process/logout.php" class="dropdown-item">Dilni</a>
+                            <?php } ?>
+                        </div>
+                    </li>
+                <?php } ?>
                 <li class="nav-item dropdown navbar-right">
                     <a class="nav-link dropdown-toggle" href="#" data-hover="dropdown" data-toggle="dropdown">
                         <img src="img/al.png" class="lang-flag" alt="Shqip"> Shqip
