@@ -47,7 +47,7 @@
                     <li class="nav-item dropdown navbar-right">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardroplogin" data-hover="dropdown" data-toggle="dropdown">
                             <img src="img/202.jpg" id="imglogin" style="width: 30px; height: 30px;" class="card-img rounded-circle logo" alt="foto">
-                            <span title="Rudin">
+                            <span title="<?php echo $_SESSION['user']['type_user'] ?>">
                                 <?php echo $_SESSION['user']['first_name'] ?>
                             </span>
                         </a>

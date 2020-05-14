@@ -7,3 +7,4 @@
 <script src="./libs/bootstrap.min.js"></script>
 
 <?php include 'db/db-connection.php'; ?>
+<?php include 'db/session-start.php'; ?>

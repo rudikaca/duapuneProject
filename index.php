@@ -26,6 +26,7 @@
 <!-- Head (Regjistrohu / Identifikohu)-->
 <div class="text-center mt-5" style="height: 160px; background: #0099cb;">
     <div class="container">
+        <?php if (!isset($_SESSION['user'])) { ?>
         <div class="row">
             <div class="col-md-6 col-sm-6">
                 <div class="bg-#0099cb">
@@ -298,6 +299,7 @@
                 </div>
             </div>
         </div>
+        <?php } ?>
     </div>
 
 </div>
@@ -526,23 +528,27 @@
 
             </div>
 
-<!--            <div class="">-->
-<!--                <button onclick="typeWriter()">Click me</button>-->
-<!--                <p id="demo"></p>-->
-<!--                <script>-->
-<!--                    var i = 0;-->
-<!--                    var txt = 'Lorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blablaLorem ipsum dummy text blabla.';-->
-<!--                    var speed = 100;-->
-<!---->
-<!--                    function typeWriter() {-->
-<!--                        if (i < txt.length) {-->
-<!--                            document.getElementById("demo").innerHTML += txt.charAt(i);-->
-<!--                            i++;-->
-<!--                            setTimeout(typeWriter, speed);-->
-<!--                        }-->
-<!--                    }-->
-<!--                </script>-->
-<!--            </div>-->
+            <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+            <div class="">
+                <button onclick="typeWriter()">Click me</button>
+                <p style="font-family: 'Bebas Neue';font-size: 20px;" class=" " id="demo"></p>
+                <script>
+                    var i = 0;
+                    var txt = 'O vovi o njishi lalit o krenaria ime te uroj me te mirat e kesaj bote ... Jam njeriu me me fat qe kam nje vllacko si ty dhe ndihem sikur kam gjithe pasurine e botes ... nuk di te shkruaj shume fjale te bukura por di qe je shembull per tu marr nga te gjithe dhe je njeriu qe gjej mbeshtetjen dhe frymezimin  qe se gjej te askush tjeter ! Te kam Boss te kam Pasha te kam King !\n' +
+                        'Edhe 100 vjec Vovi lalit !.';
+                    var speed = 100;
+
+                    function typeWriter() {
+                        if (i < txt.length) {
+                            document.getElementById("demo").innerHTML += txt.charAt(i);
+                            i++;
+                            setTimeout(typeWriter, speed);
+                        }
+                    }
+                </script>
+            </div>
+
+
         </div>
 
 
@@ -550,6 +556,7 @@
 
         <!--Forma Identifikohu-->
         <div class="col-sm-12 col-md-3">
+            <?php if (!isset($_SESSION['user'])) { ?>
             <form method="POST" action="/" accept-charset="UTF-8">
                 <h4>Identifikohu</h4>
                 <hr>
@@ -575,7 +582,7 @@
                 </div>
                 <label><a class="btn btn-outline-primary" href="register_form.php">Regjistrohu</a></label>
             </form>
-
+            <?php } ?>
             <!-- Statistikat-->
             <?php include 'partials/statistikat.php'?>
 

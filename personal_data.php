@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <?php include 'partials/links.php'; ?>
+    <?php include 'process/is_not_authenticated.php'; ?>
 
 </head>
 <body>
