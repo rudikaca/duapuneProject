@@ -14,7 +14,7 @@ if (!empty($_POST)) {
 
         $_SESSION['user'] = $loggedUser;
         $_SESSION['success'] = "You are now logged in";
-        header('location: index.php');
+        header('location: my_account.php');
 
     }else {
         $errors['loginError'] = 'Kombinimi username/password eshte i gabuar!';

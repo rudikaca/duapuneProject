@@ -56,7 +56,7 @@
                             <a href="../personal_data.php" class="dropdown-item">Të dhëna personale</a>
                             <a href="../change_password.php" class="dropdown-item">Ndrysho fjalëkalimin</a>
                             <a href="" class="dropdown-item" target="_blank">Edukim dhe Këshilla</a>
-                            <a href="" class="dropdown-item">Punët e Sygjeruara</a>
+                            <a href="../job_application.php" class="dropdown-item">Punët e Sygjeruara</a>
                             <?php if (isset($_SESSION['user'])) { ?>
                                 <a href="process/logout.php" class="dropdown-item">Dilni</a>
                             <?php } ?>

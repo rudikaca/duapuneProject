@@ -529,7 +529,7 @@
             </div>
 
             <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
-            <div class="">
+            <div class="vovi">
                 <button onclick="typeWriter()">Click me</button>
                 <p style="font-family: 'Bebas Neue';font-size: 20px;" class=" " id="demo"></p>
                 <script>
