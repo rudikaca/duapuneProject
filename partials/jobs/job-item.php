@@ -11,7 +11,7 @@
 
             <!--Te dhenat-->
             <div class="col-md-8 col-sm-12">
-                <div class="col-md-12 card-body">
+                <div class=" card-body">
                     <!--titulli profesionit-->
                     <div class="col-sm-12 card-text"><?php echo $jobItem['title']; ?></div>
 
@@ -33,23 +33,23 @@
                 </div>
             </div>
             <div class="col-md-3 col-sm-12">
-                <div class="col-md-12 card-body">
+                <div class="col-sm-12 card-body">
 
                     <!--location-->
-                    <div class="col-lg-12 col-md-12 col-sm-12 card-text">
+                    <div class="col-sm-12 card-text">
                         <small class="text-muted">
                             <a href="<?php echo $jobItem['location']['href']; ?>" target="_blank"><i class="fa fa-location-arrow" aria-hidden="true"></i> <?php echo $jobItem['location']['name']; ?></a>
                         </small>
                     </div>
 
                     <!--clock-->
-                    <div class="col-lg-12 col-md-12 col-sm-12 card-text">
+                    <div class="col-sm-12 card-text">
                         <small class="text-muted"><i class="fa fa-clock" aria-hidden="true"></i> <?php echo $jobItem['expireDate']; ?></small>
                     </div>
 
                     <!--Apliko-->
-                    <div class="col-lg-12 col-md-12 col-sm-12 card-text mt-2">
-                        <a href="<?php echo $jobItem['jobLink']; ?>" class="btn btn-success btn-sm">Apliko</a>
+                    <div class="col-sm-12 card-text mt-2">
+                        <a href="job_application.php" class="btn btn-success btn-sm">Apliko</a>
                     </div>
                 </div>
 

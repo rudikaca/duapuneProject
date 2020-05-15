@@ -9,7 +9,7 @@
     <?php include 'process/is_authenticated.php'; ?>
 
 </head>
-<body>
+<body style="font-family: Arial, Helvetica, sans-serif>
 
 
 
