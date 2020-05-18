@@ -203,7 +203,7 @@ $then = $jobDetail['expireDate'];
                                             <div class="col-md-6 ">
                                                 <div class="row">
                                                     <div class="col-xs-6 mr-auto">
-                                                        <span class="detail-label">Kategoria e Punës / Profesioni</span>
+                                                        <span class="detail-label"><b>Kategoria e Punës / Profesioni</b></span>
                                                     </div>
                                                     <div class="col-xs-6 mr-5">
                                                         <span class="text-muted detail-value"><?php echo $jobDetail['title']; ?></span>
@@ -211,7 +211,7 @@ $then = $jobDetail['expireDate'];
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-xs-6 mr-auto">
-                                                        <span class="detail-label">Tipi i punës</span>
+                                                        <span class="detail-label"><b>Tipi i punës</b></span>
                                                     </div>
                                                     <div class="col-xs-6 mr-5">
                                                         <span class="text-muted detail-value">Kohe e plote </span>
@@ -219,7 +219,7 @@ $then = $jobDetail['expireDate'];
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-xs-6 mr-auto">
-                                                        <span class="detail-label">Eksperiencë</span>
+                                                        <span class="detail-label"><b>Eksperiencë</b></span>
                                                     </div>
                                                     <div class="text-muted col-xs-6 mr-5">
                                                         ---
@@ -227,7 +227,7 @@ $then = $jobDetail['expireDate'];
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-xs-6 mr-auto">
-                                                        <span class="detail-label">Kërkohet foto</span>
+                                                        <span class="detail-label"><b>Kërkohet foto</b></span>
                                                     </div>
                                                     <div class="text-muted col-xs-6 mr-5">
                                                         Jo
@@ -238,7 +238,7 @@ $then = $jobDetail['expireDate'];
                                             <div class="col-md-6 ">
                                                 <div class="row">
                                                     <div class="col-xs-6 mr-auto">
-                                                        <span class="detail-label">Letër interesi</span>
+                                                        <span class="detail-label"><b>Letër interesi</b></span>
                                                     </div>
                                                     <div class="text-muted col-xs-6 mr-5">
                                                         <span class="detail-value">
@@ -248,7 +248,7 @@ $then = $jobDetail['expireDate'];
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-xs-6 mr-auto">
-                                                        <span class="detail-label">Rroga mujore</span>
+                                                        <span class="detail-label"><b>Rroga mujore</b></span>
                                                     </div>
                                                     <div class="text-muted col-xs-6 mr-5">
                                                         <span class="detail-value">
@@ -258,7 +258,7 @@ $then = $jobDetail['expireDate'];
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-xs-6 mr-auto">
-                                                        <span class="detail-label">Data e përfundimit</span>
+                                                        <span class="detail-label"><b>Data e përfundimit</b></span>
                                                     </div>
                                                     <div class="text-muted col-xs-6 mr-5">
                                                         <span class="detail-value"><?php echo $jobDetail['expireDate']; ?></span>
@@ -266,7 +266,7 @@ $then = $jobDetail['expireDate'];
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-xs-6 mr-auto">
-                                                        <span class="detail-label">Data e fillimit të punës</span>
+                                                        <span class="detail-label"><b>Data e fillimit të punës</b></span>
                                                     </div>
                                                     <div class="text-muted col-xs-6 mr-5">
                                                         <span class="detail-value"></span>

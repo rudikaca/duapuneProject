@@ -49,7 +49,7 @@
 
                     <!--Apliko-->
                     <div class="col-sm-12 card-text mt-2">
-                        <a href="job_application.php?id=<?php echo $jobItem['id']; ?>" class="btn btn-success btn-sm">Apliko</a>
+                        <a href="single_job.php?id=<?php echo $jobItem['id']; ?>" class="btn btn-success btn-sm">Apliko</a>
                     </div>
                 </div>
 
