@@ -12,6 +12,47 @@
 </head>
 <body>
 
+<?php
+
+if (empty($_GET['id']) || !is_numeric($_GET['id'])) {
+    header('Location: index.php');
+}
+$id = $_GET['id'];
+
+$SQL = "SELECT jobs.* , cities.`name` AS cityName, countries.`name` AS countryName FROM jobs JOIN cities ON jobs.cityId = cities.id JOIN countries ON cities.countryId = countries.id WHERE jobs.id = $id AND deleted = 0";
+$result = $conn->query($SQL);
+if ($result->num_rows <= 0) {
+    header('Location: index.php');
+}
+
+$jobDetail = $result->fetch_assoc();
+
+$SQL = 'SELECT
+                professions.*
+            FROM
+                job_professions
+            JOIN professions ON job_professions.professionsId = professions.id
+            WHERE
+                jobId = '.$jobDetail['id'].' 
+                ';
+$proffesions = $conn->query($SQL)->fetch_all(MYSQLI_ASSOC);
+
+
+//location
+
+$jobDetail['location'] = [
+    "href" => "https://www.google.com/maps/place/Tirana+County,+Albania/@41.2584531,19.5554474,10z/data=!3m1!4b1!4m5!3m4!1s0x13503a9407e31c25:0x57de78a67346afff!8m2!3d41.2427598!4d19.8067916",
+    "name" => $jobDetail['cityName'] . ", " . $jobDetail['countryName']
+];
+
+
+$then = $jobDetail['expireDate'];
+
+?>
+
+
+
+
 <!-- start include data-->
 <?php include 'partials/data/proffesion-data.php'; ?>
 <!-- end include data-->
@@ -64,7 +105,7 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <h5 style="font-family: Arial, Helvetica, sans-serif"><b>Company name</b></h5>
+                                <h5 style="font-family: Arial, Helvetica, sans-serif"><b><?php echo $jobDetail['company']; ?></b></h5>
                                 <p class="text-muted" style="font-family: Dialog">Japanese company that operates all over the world. One of the largest online English language schools in Japan. Native Camp is one of the best ESL online tutoring school in Japan.Lessons are provided via unique language platform developed by our company. Native Camp is one of the rare online schools in the world that does not use Skype.</p>
                                 <h5 style="font-family: Arial, Helvetica, sans-serif"><b>INFORMACIONE KONTAKTI</b></h5>
                                 <br>
@@ -106,21 +147,45 @@
                                             </a>
                                         </div>
                                         <br><br>
-                                        <a style="color: black" href="#">Inxhinier Mekanik (work from home)&nbsp;</a>
+                                        <a style="color: black" href="#"><?php echo $jobDetail['title']; ?></a>
                                     </h4>
-                                    <span class="p-1 rounded bg-secondary"><a class="text-white" href="">Inxhinier</a></span>
+
+
+                                        <?php
+                                        foreach ($proffesions as $proffesion) {
+                                        ?>
+                                            <span class="p-1 mr-2 rounded bg-secondary">
+                                                <a class="text-white" href="<?php echo $proffesion['id']; ?>"><?php echo $proffesion['name']; ?></a>
+                                            </span>
+                                        <?php
+                                        }
+                                        ?>
+
                                     <br><br>
                                     <div>
                                         <!--location-->
                                         <div class="col-md-12 ">
                                             <small class="text-muted">
-                                                <a href="" style="color: black" target="_blank"><i class="text-muted fa fa-location-arrow" aria-hidden="true"></i> Tirane, Shqipëri</a>
+                                                <a href="<?php echo $jobDetail['location']['href']; ?>" style="color: black" target="_blank"><i class="text-muted fa fa-location-arrow" aria-hidden="true"></i> <?php echo $jobDetail['location']['name']; ?></a>
                                             </small>
                                         </div>
 
                                         <!--clock-->
                                         <div class="col-md-12 ">
-                                            <small class="text-muted"><i class="fa fa-clock" aria-hidden="true"></i> <?php echo date("Y-m-d"); ?></small>
+                                            <small class="text-muted"><i class="fa fa-clock" aria-hidden="true"></i>
+                                                <?php
+                                                    $now = time();
+                                                    //convert $then into a timestamp.
+                                                    $thenTimestamp = strtotime($then);
+                                                    //Get the difference in seconds.
+                                                    $difference = $thenTimestamp - $now;
+                                                    //Convert seconds into days.
+                                                    $days = floor($difference / (60*60*24) );
+                                                    echo $jobDetail['expireDate'];
+                                                    echo "<br>";
+                                                    echo ("$days". " days left.");
+                                                ?>
+                                            </small>
                                         </div>
                                     </div>
                                     <br>
@@ -141,7 +206,7 @@
                                                         <span class="detail-label">Kategoria e Punës / Profesioni</span>
                                                     </div>
                                                     <div class="col-xs-6 mr-5">
-                                                        <span class="text-muted detail-value">Mësues</span>
+                                                        <span class="text-muted detail-value"><?php echo $jobDetail['title']; ?></span>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -196,7 +261,7 @@
                                                         <span class="detail-label">Data e përfundimit</span>
                                                     </div>
                                                     <div class="text-muted col-xs-6 mr-5">
-                                                        <span class="detail-value">08-06-2020</span>
+                                                        <span class="detail-value"><?php echo $jobDetail['expireDate']; ?></span>
                                                     </div>
                                                 </div>
                                                 <div class="row">
