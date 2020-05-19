@@ -106,7 +106,13 @@ if (!empty($_POST)) {
                   VALUES ('$company_name', '$business_number', '$email', '$phone', '$user_type', '$password', '$first_name', '$last_name')";
 
         if ($conn->query($sql) === TRUE) {
-            header('location: personal_data.php');
+            $last_id = $conn->insert_id;
+            $sql = "SELECT * FROM users WHERE id = '$last_id' ";
+            $loggedUser = $conn->query($sql)->fetch_assoc();
+
+            $_SESSION['user'] = $loggedUser;
+            $_SESSION['success'] = "You are now logged in";
+            header('location: my_account.php');
         } else {
             $errors['global'] = $conn->error;
         }
