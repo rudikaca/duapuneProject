@@ -527,28 +527,6 @@
                 ?>
 
             </div>
-
-            <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
-            <div class="vovi">
-                <button onclick="typeWriter()">Click me Vovi</button>
-                <p style="font-family: 'Bebas Neue';font-size: 20px;" class=" " id="demo"></p>
-                <script>
-                    var i = 0;
-                    var txt = 'O vovi o njishi lalit o krenaria ime te uroj me te mirat e kesaj bote ... Jam njeriu me me fat qe kam nje vllacko si ty dhe ndihem sikur kam gjithe pasurine e botes ... nuk di te shkruaj shume fjale te bukura por di qe je shembull per tu marr nga te gjithe dhe je njeriu qe gjej mbeshtetjen dhe frymezimin  qe se gjej te askush tjeter ! Te kam Boss te kam Pasha te kam King !\n' +
-                        'Edhe 100 vjec Vovi lalit !.';
-                    var speed = 100;
-
-                    function typeWriter() {
-                        if (i < txt.length) {
-                            document.getElementById("demo").innerHTML += txt.charAt(i);
-                            i++;
-                            setTimeout(typeWriter, speed);
-                        }
-                    }
-                </script>
-            </div>
-
-
         </div>
 
 

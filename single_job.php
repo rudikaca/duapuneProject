@@ -109,9 +109,9 @@ $then = $jobDetail['expireDate'];
                                 <p class="text-muted" style="font-family: Dialog">Japanese company that operates all over the world. One of the largest online English language schools in Japan. Native Camp is one of the best ESL online tutoring school in Japan.Lessons are provided via unique language platform developed by our company. Native Camp is one of the rare online schools in the world that does not use Skype.</p>
                                 <h5 style="font-family: Arial, Helvetica, sans-serif"><b>INFORMACIONE KONTAKTI</b></h5>
                                 <br>
-                                <button class="col-md-12 col-sm-12 mb-3 btn btn-outline-primary" onclick="" style="padding: 10px 32px 10px 32px;margin-right: 10px;" type="button">Profili i Kompanisë</button>
+                                <a class="col-md-12 col-sm-12 mb-3 btn btn-outline-primary" href="compani_profile.php?id=$" style="padding: 10px 32px 10px 32px;margin-right: 10px;" type="button">Profili i Kompanisë</a>
                                 <br>
-                                <button class="col-md-12 col-sm-12  btn btn-outline-primary" onclick="" style="padding: 10px 32px 10px 32px;margin-right: 10px;" type="button">Punët aktive të kompanisë</button>
+                                <a class="col-md-12 col-sm-12  btn btn-outline-primary" href="" style="padding: 10px 32px 10px 32px;margin-right: 10px;" type="button">Punët aktive të kompanisë</a>
                             </div>
                         </div>
                     </div>
@@ -150,17 +150,16 @@ $then = $jobDetail['expireDate'];
                                         <a style="color: black" href="#"><?php echo $jobDetail['title']; ?></a>
                                     </h4>
 
-
-                                        <?php
-                                        foreach ($proffesions as $proffesion) {
-                                        ?>
-                                            <span class="p-1 mr-2 rounded bg-secondary">
-                                                <a class="text-white" href="<?php echo $proffesion['id']; ?>"><?php echo $proffesion['name']; ?></a>
-                                            </span>
-                                        <?php
-                                        }
-                                        ?>
-
+                                        <!-- profesioni-->
+                                    <?php
+                                    foreach ($proffesions as $proffesion) {
+                                    ?>
+                                        <span class="p-1 mr-2 rounded bg-secondary">
+                                            <a class="text-white" href="<?php echo $proffesion['id']; ?>"><?php echo $proffesion['name']; ?></a>
+                                        </span>
+                                    <?php
+                                    }
+                                    ?>
                                     <br><br>
                                     <div>
                                         <!--location-->
