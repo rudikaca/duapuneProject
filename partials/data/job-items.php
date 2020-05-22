@@ -3,10 +3,11 @@
 
 $SQL = '
 SELECT
-	jobs.*, cities.`name` AS cityName
+	jobs.*, cities.`name` AS cityName , companies.`name` AS companyName
 FROM
 	jobs
 JOIN cities ON jobs.cityId = cities.id
+JOIN companies ON jobs.companyId = companies.id
 WHERE jobs.deleted = 0
 ORDER BY jobs.id ASC
 ';

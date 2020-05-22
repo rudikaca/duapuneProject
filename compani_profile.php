@@ -12,9 +12,26 @@
 </head>
 <body>
 
+<?php
 
+if (empty($_GET['id']) || !is_numeric($_GET['id'])) {
+    header('Location: single_job.php');
+}
+$id = $_GET['id'];
 
+$SQL = "SELECT companies.*, cities.name AS cityName, countries.name AS countryName FROM companies
+JOIN cities ON companies.cityId = cities.id
+JOIN countries ON cities.countryId = countries.id
+WHERE companies.id = $id AND deleted = 0";
 
+$result = $conn->query($SQL);
+
+if ($result->num_rows <= 0) {
+    header('Location: index.php');
+}
+$companyDetail = $result->fetch_assoc();
+
+?>
 
 
 <!-- start include data-->
@@ -35,7 +52,7 @@
             <!--Kreu-->
             <div class="row">
                 <div class="col-md-12 mt-5 text-center">
-                    <h4><a style="color: #0056b3" href="index.php">Kreu</a> > <a style="color: #0056b3" href="">Kompanitë</a> > ikubINFO shpk</h4>
+                    <h4><a style="color: #0056b3" href="index.php">Kreu</a> > <a style="color: #0056b3" href="">Kompanitë</a> > <?php echo $companyDetail['name']; ?></h4>
                 </div>
             </div>
 
@@ -61,7 +78,7 @@
                                 <p><small><b>Statistika</b></small></p>
                                 <div>
                                     <h5>
-                                        101-202
+                                        <?php echo $companyDetail['company_size']; ?>
                                         <br>
                                         <small class="text-muted"><small>Numri i Punonjësve</small></small>
                                     </h5>
@@ -73,13 +90,13 @@
                                     </h5>
                                     <br>
                                     <h5>
-                                        Privat
+                                        <?php echo $companyDetail['sector']; ?>
                                         <br>
                                         <small class="text-muted"><small>Sektori</small></small>
                                     </h5>
                                     <br>
                                     <h5>
-                                        2007
+                                        <?php echo $companyDetail['founded']; ?>
                                         <br>
                                         <small class="text-muted"><small>Themeluar</small></small>
                                     </h5>
@@ -97,58 +114,36 @@
                                 <!--Kodi i punes-->
                                 <div class="mb-5 mid-content">
                                     <h2>
-                                        <strong>ikubINFO shpk</strong>
+                                        <strong><?php echo $companyDetail['name']; ?></strong>
                                     </h2>
                                     <br>
                                     <!--location-->
                                     <div class="job-details">
                                         <small>
                                             <span class="location"><i class="text-muted fa fa-location-arrow" aria-hidden="true"></i>
-                                            Tirane, Shqipëri
+                                                <?php echo $companyDetail['cityName']; ?>,
+                                                <?php echo $companyDetail['countryName']; ?>
                                             </span>
                                             <span class="expire"><i class="text-muted fa fa-folder-open" aria-hidden="true"></i>
                                             Shërbimet personale (individuale)
                                             </span>
-                                            <span class="expire"><i class="text-muted fa fa-globe" aria-hidden="true"></i> <a href="http://www.ikubinfo.al" target="_blank">www.ikubinfo.al</a>
+                                            <span class="expire"><i class="text-muted fa fa-globe" aria-hidden="true"></i> <a href="#" target="_blank"><?php echo $companyDetail['website']; ?></a>
                                             </span>
                                         </small>
                                     </div>
                                     <br>
                                     <hr>
-
                                 </div>
 
                                 <!--Pershkrimi-->
                                 <div class="main-content-wrap">
-                                    <h3 class="headtitle-inner"><strong>Përshkrimi</strong></h3>
-                                    <p>NativeCamp. is one of the largest English schools and one of the best online tutoring schools in Japan. Teachers are from all over the world, spreading their knowledge and experience with students. Lessons are provided via a unique language platform developed by our company.&nbsp;</p>
-                                    <p>What we offer:</p>
-                                    <ul>
-                                        <li>FLEXIBILITY 100%</li>
-                                        <li>NO minimum hours per week required</li>
-                                        <li>Work from any location</li>
-                                        <li>Work whenever you want (24/7)</li>
-                                        <li>PERFORMANCE-BASED SALARY</li>
-                                        <li>You earn how much you work</li>
-                                        <li>Join the incentives' activities and competitions</li>
-                                        <li>Salary on time, secured payment</li>
-                                        <li>ONLINE SUPPORT ALWAYS AVAILABLE</li>
-                                    </ul>
-                                    <hr><br>
-                                    <h3 class=""><strong>Çertifikime</strong></h3>
+                                    <h3><strong>Përshkrimi i kompanisë</strong></h3>
+                                    <?php echo $companyDetail['description']; ?>
+                                    <hr>
+                                    <br>
+                                    <h3><strong>Çertifikime</strong></h3>
                                     <div class="container">
-                                        <div class="row">
-                                            <div class="col-xs-12">OHSAS 18001: 2007</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-12"> ISO-IEC 20000-1: 2011</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-12"> ISO 22301: 2012 </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-xs-12"> BSI-PAS99</div>
-                                        </div>
+                                        <?php echo $companyDetail['certifications']; ?>
                                     </div>
                                     <hr>
                                     <br>
@@ -207,7 +202,7 @@
                                                     <!--Apliko-->
                                                     <div class="col-md-1 col-sm-12">
                                                         <div class="col-sm-12 card-text mt-5">
-                                                            <a href="single_job.php?id=" class="btn btn-outline-success">Apliko</a>
+                                                            <a href="" class="btn btn-outline-success">Apliko</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -268,7 +263,7 @@
                                                     <!--Apliko-->
                                                     <div class="col-md-1 col-sm-12">
                                                         <div class="col-sm-12 card-text mt-5">
-                                                            <a href="single_job.php?id=" class="btn btn-outline-success">Apliko</a>
+                                                            <a href="" class="btn btn-outline-success">Apliko</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -329,7 +324,7 @@
                                                     <!--Apliko-->
                                                     <div class="col-md-1 col-sm-12">
                                                         <div class="col-sm-12 card-text mt-5">
-                                                            <a href="single_job.php?id=" class="btn btn-outline-success">Apliko</a>
+                                                            <a href="" class="btn btn-outline-success">Apliko</a>
                                                         </div>
                                                     </div>
                                                 </div>

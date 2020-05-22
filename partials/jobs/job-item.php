@@ -17,7 +17,7 @@
 
                     <!--emri i kompanise-->
                     <div class="col-sm-12 card-text">
-                        <small class="text-muted"><?php echo $jobItem['company']; ?></small>
+                        <small class="text-muted"><?php echo $jobItem['companyName']; ?></small>
                     </div>
 
                     <!--butonat profesione-->

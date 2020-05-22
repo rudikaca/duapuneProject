@@ -19,7 +19,13 @@ if (empty($_GET['id']) || !is_numeric($_GET['id'])) {
 }
 $id = $_GET['id'];
 
-$SQL = "SELECT jobs.* , cities.`name` AS cityName, countries.`name` AS countryName FROM jobs JOIN cities ON jobs.cityId = cities.id JOIN countries ON cities.countryId = countries.id WHERE jobs.id = $id AND deleted = 0";
+$SQL = "SELECT jobs.* , cities.`name` AS cityName, countries.`name` AS countryName , companies.`name` AS companyName, companies.`short_description` AS companyShortDescription
+        FROM jobs 
+        JOIN cities ON jobs.cityId = cities.id 
+        JOIN countries ON cities.countryId = countries.id 
+        JOIN companies ON jobs.companyId = companies.id
+        WHERE jobs.id = $id AND jobs.deleted = 0";
+
 $result = $conn->query($SQL);
 if ($result->num_rows <= 0) {
     header('Location: index.php');
@@ -105,11 +111,11 @@ $then = $jobDetail['expireDate'];
                                     </div>
                                 </div>
                                 <hr>
-                                <h5 style="font-family: Arial, Helvetica, sans-serif"><b><?php echo $jobDetail['company']; ?></b></h5>
-                                <p class="text-muted" style="font-family: Dialog">Japanese company that operates all over the world. One of the largest online English language schools in Japan. Native Camp is one of the best ESL online tutoring school in Japan.Lessons are provided via unique language platform developed by our company. Native Camp is one of the rare online schools in the world that does not use Skype.</p>
+                                <h5 style="font-family: Arial, Helvetica, sans-serif"><b><?php echo $jobDetail['companyName']; ?></b></h5>
+                                <p class="text-muted" style="font-family: Dialog"><?php echo $jobDetail['companyShortDescription']; ?></p>
                                 <h5 style="font-family: Arial, Helvetica, sans-serif"><b>INFORMACIONE KONTAKTI</b></h5>
                                 <br>
-                                <a class="col-md-12 col-sm-12 mb-3 btn btn-outline-primary" href="compani_profile.php?id=$" style="padding: 10px 32px 10px 32px;margin-right: 10px;" type="button">Profili i Kompanisë</a>
+                                <a class="col-md-12 col-sm-12 mb-3 btn btn-outline-primary" href="compani_profile.php?id=<?php echo $jobDetail['companyId']; ?>" style="padding: 10px 32px 10px 32px;margin-right: 10px;" type="button">Profili i Kompanisë</a>
                                 <br>
                                 <a class="col-md-12 col-sm-12  btn btn-outline-primary" href="" style="padding: 10px 32px 10px 32px;margin-right: 10px;" type="button">Punët aktive të kompanisë</a>
                             </div>
