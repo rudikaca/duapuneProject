@@ -19,10 +19,17 @@ if (empty($_GET['id']) || !is_numeric($_GET['id'])) {
 }
 $id = $_GET['id'];
 
-$SQL = "SELECT companies.*, cities.name AS cityName, countries.name AS countryName FROM companies
-JOIN cities ON companies.cityId = cities.id
-JOIN countries ON cities.countryId = countries.id
-WHERE companies.id = $id AND deleted = 0";
+$SQL = "SELECT
+	companies.*,
+	cities.NAME AS cityName,
+	countries.NAME AS countryName
+FROM
+	companies
+	JOIN cities ON companies.cityId = cities.id
+	JOIN countries ON cities.countryId = countries.id 
+WHERE
+	companies.id = $id 
+	AND companies.deleted = 0";
 
 $result = $conn->query($SQL);
 
@@ -30,6 +37,18 @@ if ($result->num_rows <= 0) {
     header('Location: index.php');
 }
 $companyDetail = $result->fetch_assoc();
+
+$SQL = "SELECT
+	jobs.*, cities.`name` AS cityName , companies.`name` AS companyName
+FROM
+	jobs
+JOIN cities ON jobs.cityId = cities.id
+JOIN companies ON jobs.companyId = companies.id
+WHERE jobs.deleted = 0 AND jobs.companyId = $id
+ORDER BY jobs.id ASC";
+
+$companyJobs = $conn->query($SQL)->fetch_all(MYSQLI_ASSOC);
+
 
 ?>
 
@@ -84,7 +103,7 @@ $companyDetail = $result->fetch_assoc();
                                     </h5>
                                     <br>
                                     <h5>
-                                        3
+                                        <?php echo count($companyJobs); ?>
                                         <br>
                                         <small class="text-muted"><small>Punë Aktive</small></small>
                                     </h5>
@@ -147,191 +166,89 @@ $companyDetail = $result->fetch_assoc();
                                     </div>
                                     <hr>
                                     <br>
-                                    <h3 class=""><strong>Punët aktive nga ikubINFO shpk</strong></h3>
+                                    <h3 class=""><strong>Punët aktive nga <?php echo $companyDetail['name']; ?></strong></h3>
                                     <br>
-                                    <div class="job-listing mid-content-mod col-md-12 second">
-                                        <div class="  mb-1 job-item">
-                                            <div class="container">
-                                                <div class="row no-gutters">
 
-                                                    <!--Logo e kompanise-->
-                                                    <div class="col-md-1 col-sm-12">
-                                                        <img src="img/202.jpg" class="card-img rounded-circle logo" alt="foto">
-                                                    </div>
+                                    <?php foreach ($companyJobs as $companyJob) {
+                                        $SQL = 'SELECT
+                                                    professions.*
+                                                FROM
+                                                    job_professions
+                                                JOIN professions ON job_professions.professionsId = professions.id
+                                                WHERE
+                                                    jobId = '.$companyJob['id'].' 
+                                                    ';
+                                        $proffesions = $conn->query($SQL)->fetch_all(MYSQLI_ASSOC);
 
-                                                    <!--Te dhenat-->
-                                                    <div class="col-md-7 col-sm-12">
-                                                        <div class=" card-body">
-                                                            <!--titulli profesionit-->
-                                                            <div class="col-sm-12 card-text">
-                                                                <h4>Experienced Java Developer</h4>
-                                                            </div>
+                                        ?>
+                                        <div class="job-listing mid-content-mod col-md-12 second">
+                                            <div class="  mb-1 job-item">
+                                                <div class="container">
+                                                    <div class="row no-gutters">
 
-                                                            <!--emri i kompanise-->
-                                                            <div class="col-sm-12 card-text text-muted">
-                                                                <small class="text-muted">ikubINFO shpk</small>
-                                                            </div>
+                                                        <!--Logo e kompanise-->
+                                                        <div class="col-md-1 col-sm-12">
+                                                            <img src="img/202.jpg" class="card-img rounded-circle logo" alt="foto">
+                                                        </div>
 
-                                                            <!--butonat profesione-->
-                                                            <div class="col-sm-12 card-text mt-2">
-                                                                <span class="p-1 mr-2 rounded bg-secondary">
-                                                                    <a class="text-white" href="">Programues</a>
-                                                                </span>
+                                                        <!--Te dhenat-->
+                                                        <div class="col-md-7 col-sm-12">
+                                                            <div class=" card-body">
+                                                                <!--titulli profesionit-->
+                                                                <div class="col-sm-12 card-text">
+                                                                    <h4><?php echo $companyJob['title']; ?></h4>
+                                                                </div>
+
+                                                                <!--emri i kompanise-->
+                                                                <div class="col-sm-12 card-text text-muted">
+                                                                    <small class="text-muted"><?php echo $companyDetail['name']; ?></small>
+                                                                </div>
+
+                                                                <!--butonat profesione-->
+                                                                <div class="col-sm-12 card-text mt-2">
+                                                                        <?php
+                                                                        foreach ($proffesions as $proffesion) {
+                                                                        ?>
+                                                                            <span class="p-1 mr-2 rounded bg-secondary">
+                                                                                <a class="text-white" href="<?php echo $proffesion['id']; ?>"><?php echo $proffesion['name']; ?></a>
+                                                                            </span>
+                                                                        <?php
+                                                                        }
+                                                                        ?>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
 
-                                                    <!--Data & location-->
-                                                    <div class="col-md-3 col-sm-12">
-                                                        <div class="col-sm-12 card-body">
+                                                        <!--Data & location-->
+                                                        <div class="col-md-3 col-sm-12">
+                                                            <div class="col-sm-12 card-body">
 
-                                                            <!--location-->
-                                                            <div class="col-sm-12 card-text text-muted">
-                                                                <small class="text-muted">
-                                                                    <a href="" target="_blank"><i class="fa fa-location-arrow" aria-hidden="true"></i> Tirane</a>
-                                                                </small>
-                                                            </div>
+                                                                <!--location-->
+                                                                <div class="col-sm-12 card-text text-muted">
+                                                                    <small class="text-muted">
+                                                                        <a href="" target="_blank"><i class="fa fa-location-arrow" aria-hidden="true"></i> <?php echo $companyDetail['cityName']; ?></a>
+                                                                    </small>
+                                                                </div>
 
-                                                            <!--clock-->
-                                                            <div class="col-sm-12 card-text text-muted">
-                                                                <small class="text-muted"><i class="fa fa-clock" aria-hidden="true"></i> 20/6/2020 edhe 15 dite</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!--Apliko-->
-                                                    <div class="col-md-1 col-sm-12">
-                                                        <div class="col-sm-12 card-text mt-5">
-                                                            <a href="" class="btn btn-outline-success">Apliko</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="job-listing mid-content-mod col-md-12 second">
-                                        <div class="  mb-1 job-item">
-                                            <div class="container">
-                                                <div class="row no-gutters">
-
-                                                    <!--Logo e kompanise-->
-                                                    <div class="col-md-1 col-sm-12">
-                                                        <img src="img/202.jpg" class="card-img rounded-circle logo" alt="foto">
-                                                    </div>
-
-                                                    <!--Te dhenat-->
-                                                    <div class="col-md-7 col-sm-12">
-                                                        <div class=" card-body">
-                                                            <!--titulli profesionit-->
-                                                            <div class="col-sm-12 card-text">
-                                                                <h4>Experienced Java Developer</h4>
-                                                            </div>
-
-                                                            <!--emri i kompanise-->
-                                                            <div class="col-sm-12 card-text text-muted">
-                                                                <small class="text-muted">ikubINFO shpk</small>
-                                                            </div>
-
-                                                            <!--butonat profesione-->
-                                                            <div class="col-sm-12 card-text mt-2">
-                                                                <span class="p-1 mr-2 rounded bg-secondary">
-                                                                    <a class="text-white" href="">Programues</a>
-                                                                </span>
+                                                                <!--clock-->
+                                                                <div class="col-sm-12 card-text text-muted">
+                                                                    <small class="text-muted"><i class="fa fa-clock" aria-hidden="true"></i> <?php echo $companyJob['expireDate']; ?></small>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
 
-                                                    <!--Data & location-->
-                                                    <div class="col-md-3 col-sm-12">
-                                                        <div class="col-sm-12 card-body">
-
-                                                            <!--location-->
-                                                            <div class="col-sm-12 card-text text-muted">
-                                                                <small class="text-muted">
-                                                                    <a href="" target="_blank"><i class="fa fa-location-arrow" aria-hidden="true"></i> Tirane</a>
-                                                                </small>
+                                                        <!--Apliko-->
+                                                        <div class="col-md-1 col-sm-12">
+                                                            <div class="col-sm-12 card-text mt-5">
+                                                                <a href="" class="btn btn-outline-success">Apliko</a>
                                                             </div>
-
-                                                            <!--clock-->
-                                                            <div class="col-sm-12 card-text text-muted">
-                                                                <small class="text-muted"><i class="fa fa-clock" aria-hidden="true"></i> 20/6/2020 edhe 15 dite</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!--Apliko-->
-                                                    <div class="col-md-1 col-sm-12">
-                                                        <div class="col-sm-12 card-text mt-5">
-                                                            <a href="" class="btn btn-outline-success">Apliko</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <hr>
-                                    <div class="job-listing mid-content-mod col-md-12 second">
-                                        <div class="  mb-1 job-item">
-                                            <div class="container">
-                                                <div class="row no-gutters">
-
-                                                    <!--Logo e kompanise-->
-                                                    <div class="col-md-1 col-sm-12">
-                                                        <img src="img/202.jpg" class="card-img rounded-circle logo" alt="foto">
-                                                    </div>
-
-                                                    <!--Te dhenat-->
-                                                    <div class="col-md-7 col-sm-12">
-                                                        <div class=" card-body">
-                                                            <!--titulli profesionit-->
-                                                            <div class="col-sm-12 card-text">
-                                                                <h4>Experienced Java Developer</h4>
-                                                            </div>
-
-                                                            <!--emri i kompanise-->
-                                                            <div class="col-sm-12 card-text text-muted">
-                                                                <small class="text-muted">ikubINFO shpk</small>
-                                                            </div>
-
-                                                            <!--butonat profesione-->
-                                                            <div class="col-sm-12 card-text mt-2">
-                                                                <span class="p-1 mr-2 rounded bg-secondary">
-                                                                    <a class="text-white" href="">Programues</a>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!--Data & location-->
-                                                    <div class="col-md-3 col-sm-12">
-                                                        <div class="col-sm-12 card-body">
-
-                                                            <!--location-->
-                                                            <div class="col-sm-12 card-text text-muted">
-                                                                <small class="text-muted">
-                                                                    <a href="" target="_blank"><i class="fa fa-location-arrow" aria-hidden="true"></i> Tirane</a>
-                                                                </small>
-                                                            </div>
-
-                                                            <!--clock-->
-                                                            <div class="col-sm-12 card-text text-muted">
-                                                                <small class="text-muted"><i class="fa fa-clock" aria-hidden="true"></i> 20/6/2020 edhe 15 dite</small>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!--Apliko-->
-                                                    <div class="col-md-1 col-sm-12">
-                                                        <div class="col-sm-12 card-text mt-5">
-                                                            <a href="" class="btn btn-outline-success">Apliko</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr>
+                                        <hr>
+                                    <?php }?>
 
                                     <br>
                                 </div>
