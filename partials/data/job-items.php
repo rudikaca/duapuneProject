@@ -2,12 +2,16 @@
 
 
 $conditions = '';
+$searchId = isset($_GET['fjale']) ? $_GET['fjale'] : '';
 $searchCompany = isset($_GET['company']) ? $_GET['company'] : '';
 $searchCountry = isset($_GET['country']) ? $_GET['country'] : '';
 $searchCity = isset($_GET['city']) ? $_GET['city'] : '';
 $searchJobType = isset($_GET['job_type']) ? $_GET['job_type'] : '';
 $searchCategory = isset($_GET['category']) ? $_GET['category'] : '';
 
+if (!empty($searchId)) {
+    $conditions .= ' AND (jobs.id = "' . $searchId . '" OR jobs.title LIKE "%' . $searchId . '%")  ';
+}
 if (!empty($searchCompany)) {
     $conditions .= ' AND companies.name LIKE "%' . $searchCompany . '%" ';
 }

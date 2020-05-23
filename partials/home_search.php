@@ -21,7 +21,7 @@ $categories = $conn->query($SQL)->fetch_all(MYSQLI_ASSOC);
         <hr>
         <div class="form-group">
             <label for="fjalkyc"><small><b>Fjale kyce ose kodin e punes</b></small></label>
-            <input type="text" class="form-control" id="fjalkyc"  name="fjale">
+            <input type="text" class="form-control" id="fjalkyc"  name="fjale" value="<?php echo $searchId; ?>">
         </div>
         <div class="form-group">
             <label for="emrikomp"><small><b>Emri i kompanise</b></small></label>
@@ -31,33 +31,27 @@ $categories = $conn->query($SQL)->fetch_all(MYSQLI_ASSOC);
             <label for="country"><small><b>Shteti</b></small></label>
             <select class="form-control select-opt" id="country" name="country">
                 <option value="" selected="selected">Zgjidhni shtetin</option>
-
                 <?php foreach ($countries as $country) {?>
                     <option value="<?php echo $country['id']; ?>" <?php echo ($country['id'] == $searchCountry ? 'selected' : ''); ?>><?php echo $country['name']; ?></option>
                 <?php } ?>
-
             </select>
         </div>
         <div class="form-group">
             <label for="city"><small><b>Qyteti</b></small></label>
             <select class="form-control select-opt" id="city" name="city">
                 <option value="" selected="selected">Zgjidhni qytetin</option>
-
                 <?php foreach ($cities as $city) {?>
                     <option value="<?php echo $city['id']; ?>" <?php echo ($city['id'] == $searchCity ? 'selected' : ''); ?>><?php echo $city['name']; ?></option>
                 <?php } ?>
-
             </select>
         </div>
         <div class="form-group">
             <label for="category"><small><b>Kategoria</b></small></label>
             <select class="form-control select-opt" id="category" name="category">
                 <option value="" selected="selected">Zgjidhni kategorinë</option>
-
                 <?php foreach ($categories as $category) {?>
                     <option value="<?php echo $category['id']; ?>" <?php echo ($category['id'] == $searchCategory ? 'selected' : ''); ?>><?php echo $category['name']; ?></option>
                 <?php } ?>
-
             </select>
         </div>
         <div class="form-group">
