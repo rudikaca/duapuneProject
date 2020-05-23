@@ -77,7 +77,7 @@ $then = $jobDetail['expireDate'];
             <!--Kreu-->
             <div class="row">
                 <div class="col-md-12 mt-5 text-center">
-                    <h4><a style="color: #0056b3" href="index.php">Kreu</a> > <a style="color: #0056b3" href="">Punët</a> > Kodi Punes:</h4>
+                    <h4><a style="color: #0056b3" href="index.php">Kreu</a> > <a style="color: #0056b3" href="">Punët</a> > Kodi Punes: <?php echo $jobDetail['id']; ?></h4>
                 </div>
             </div>
 
@@ -129,7 +129,7 @@ $then = $jobDetail['expireDate'];
                                 <!--Kodi i punes-->
                                 <div class="mb-5 mid-content">
                                     <h4>
-                                        <small class="text-muted" style="border-style: dashed; padding: 7px ;">Kodi Punës:</small>
+                                        <small class="text-muted" style="border-style: dashed; padding: 7px ;">Kodi Punës: <?php echo $jobDetail['id']; ?></small>
                                         <div class="text-muted float-right mt-2 social-icons-share">
                                             <!-- Facebook -->
                                             <a href="">

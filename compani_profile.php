@@ -130,7 +130,7 @@ $companyJobs = $conn->query($SQL)->fetch_all(MYSQLI_ASSOC);
                     <div class="col-md-9 mt-3">
                         <div class="card col-md-12 border-2 m-2 shadow-sm">
                             <div class="job-listing col-md-12 mt-5 mr-3">
-                                <!--Kodi i punes-->
+                                <!--pershkrimi i kompanise-->
                                 <div class="mb-5 mid-content">
                                     <h2>
                                         <strong><?php echo $companyDetail['name']; ?></strong>
@@ -177,6 +177,7 @@ $companyJobs = $conn->query($SQL)->fetch_all(MYSQLI_ASSOC);
                                                 JOIN professions ON job_professions.professionsId = professions.id
                                                 WHERE
                                                     jobId = '.$companyJob['id'].' 
+                                                LIMIT 4
                                                     ';
                                         $proffesions = $conn->query($SQL)->fetch_all(MYSQLI_ASSOC);
 
@@ -209,8 +210,8 @@ $companyJobs = $conn->query($SQL)->fetch_all(MYSQLI_ASSOC);
                                                                         <?php
                                                                         foreach ($proffesions as $proffesion) {
                                                                         ?>
-                                                                            <span class="p-1 mr-2 rounded bg-secondary">
-                                                                                <a class="text-white" href="<?php echo $proffesion['id']; ?>"><?php echo $proffesion['name']; ?></a>
+                                                                            <span class="">
+                                                                                <button class="btn-primary badge-pill" href="<?php echo $proffesion['id']; ?>"><?php echo $proffesion['name']; ?></button>
                                                                             </span>
                                                                         <?php
                                                                         }
