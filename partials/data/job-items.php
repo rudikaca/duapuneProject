@@ -1,14 +1,38 @@
 <?php
 
 
+$conditions = '';
+$searchCompany = isset($_GET['company']) ? $_GET['company'] : '';
+$searchCountry = isset($_GET['country']) ? $_GET['country'] : '';
+$searchCity = isset($_GET['city']) ? $_GET['city'] : '';
+$searchJobType = isset($_GET['job_type']) ? $_GET['job_type'] : '';
+$searchCategory = isset($_GET['category']) ? $_GET['category'] : '';
+
+if (!empty($searchCompany)) {
+    $conditions .= ' AND companies.name LIKE "%' . $searchCompany . '%" ';
+}
+if (!empty($searchCountry) && is_numeric($searchCountry)) {
+    $conditions .= ' AND cities.countryId = ' . $searchCountry . ' ';
+}
+if (!empty($searchCity) && is_numeric($searchCity)) {
+    $conditions .= ' AND cities.id = ' . $searchCity . ' ';
+}
+if (!empty($searchJobType)) {
+    $conditions .= ' AND jobs.type = "' . $searchJobType . '" ';
+}
+if (!empty($searchCategory) && is_numeric($searchCategory)) {
+    $conditions .= ' AND jobs.job_categoryId = ' . $searchCategory . ' ';
+}
+
+
 $SQL = '
 SELECT
-	jobs.*, cities.`name` AS cityName , companies.`name` AS companyName
+	jobs.*, cities.`name` AS cityName , companies.`name` AS companyName, companies.`company_logo` AS companyLogo
 FROM
 	jobs
 JOIN cities ON jobs.cityId = cities.id
 JOIN companies ON jobs.companyId = companies.id
-WHERE jobs.deleted = 0
+WHERE jobs.deleted = 0 '.$conditions.'
 ORDER BY jobs.id ASC
 ';
 $jobItems = $conn->query($SQL)->fetch_all(MYSQLI_ASSOC);

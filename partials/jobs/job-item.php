@@ -6,7 +6,7 @@
 
             <!--Logo e kompanise-->
             <div class="col-md-1 col-sm-12">
-                <img src="<?php echo $jobItem['companyLogo']; ?>" class="card-img rounded-circle logo" alt="foto">
+                <img src="img/<?php echo $jobItem['companyLogo']; ?>" class="card-img rounded-circle logo" alt="foto">
             </div>
 
             <!--Te dhenat-->

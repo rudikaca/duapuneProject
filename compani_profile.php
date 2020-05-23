@@ -240,7 +240,7 @@ $companyJobs = $conn->query($SQL)->fetch_all(MYSQLI_ASSOC);
                                                         <!--Apliko-->
                                                         <div class="col-md-1 col-sm-12">
                                                             <div class="col-sm-12 card-text mt-5">
-                                                                <a href="" class="btn btn-outline-success">Apliko</a>
+                                                                <a href="single_job.php?id=<?php echo $companyJob['id']; ?>" class="btn btn-outline-success">Apliko</a>
                                                             </div>
                                                         </div>
                                                     </div>
