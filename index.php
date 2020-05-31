@@ -306,13 +306,7 @@
 <hr>
 
 <!-- butonat posht head -->
-<div class="container text-center">
-    <?php
-    foreach ($proffesionsData as $index => $proffesiondata) {
-        include 'partials/proffesions.php';
-    }
-    ?>
-</div>
+<div class="container text-center" id="proffesion-data-container"><!-- Data received with AJAX --></div>
 <br>
 
 <!--Format-->
@@ -325,7 +319,7 @@
 
         <!-- Shfaqja e puneve NE MES-->
         <div class="col-sm-12 col-md-6 customlistinghome">
-            <div class="row">
+            <div id="jobItemsContainer" class="row">
 
                 <!--job item 1-->
                 <?php
@@ -381,6 +375,48 @@
 <?php include 'partials/footer.php'; ?>
 
 <script>
+
+    $(document).ready(function(){
+        // get profession data, AJAX
+        $.get('ajax/get/proffesion-data.php', function(response){
+            $('#proffesion-data-container').html(response);
+        });
+
+        //get statistic data AJAX
+        $.get('ajax/get/statistic-data.php', function (response) {
+            response = JSON.parse(response);
+            $('#puneAktive').html(response.puneAktive);
+            $('#puneKerkues').html(response.puneKerkues);
+            $('#puneDhenes').html(response.puneDhenes);
+        });
+
+
+        $('#country-select').change(function () {
+            // get cities data, AJAX
+            $.get('ajax/get/cities-data.php?id='+$(this).val(), function(response){
+                $('#city-select').html(response);
+            });
+        });
+
+        $('#searchButton').click(function () {
+            // get jobs data, AJAX
+            var fjale       = $("#fjalkyc").val();
+            var company     = $("#emrikomp").val();
+            var country     = $("#country-select").val();
+            var city        = $("#city-select").val();
+            var job_type    = $("#job_type").val();
+            var category    = $("#category").val();
+            var queryParams = '?fjale='+ fjale+'&company='+company+'&country='+country+'&city='+city+'&job_type='+job_type+'&category='+category;
+
+            $.get('ajax/get/search-jobs.php' + queryParams, function(response){
+                $('#jobItemsContainer').html(response);
+            });
+        });
+
+
+    });
+
+
     <?php include 'partials/scripts.php'; ?>
 </script>
 

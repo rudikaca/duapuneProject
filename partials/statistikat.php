@@ -1,35 +1,4 @@
-<?php
 
-//Pune Aktive
-$SQL = 'SELECT
-            COUNT( id ) AS total 
-        FROM
-            jobs 
-        WHERE
-            deleted = 0; ';
-$activeJobsTotal = $conn->query($SQL)->fetch_assoc();
-
-//Punekerkues
-$SQL = 'SELECT
-            COUNT( id ) AS total 
-        FROM
-            users 
-        WHERE
-            type_user = "punekerkues"
-            AND deleted = 0;';
-$punekerkuesTotal = $conn->query($SQL)->fetch_assoc();
-
-//Punedhenes
-$SQL = 'SELECT
-            COUNT( id ) AS total 
-        FROM
-            users 
-        WHERE
-            type_user = "punedhenes"
-            AND deleted = 0;';
-$punedhenesTotal = $conn->query($SQL)->fetch_assoc();
-
-?>
 
 
 <!-- Statistikat-->
@@ -38,14 +7,15 @@ $punedhenesTotal = $conn->query($SQL)->fetch_assoc();
 
         <div class="btn-group-vertical w-75" >
             <button type="button" class="btn text-left" >
-                <div><i><?php echo $activeJobsTotal['total']; ?></i></div>
+                <div id="puneAktive"></div>
                 <div><small><b>Pune aktive</b></small></div>
             </button>
-            <button type="button" class="btn text-left"><div><i><?php echo $punekerkuesTotal['total']; ?></i></div>
+            <button type="button" class="btn text-left">
+                <div id="puneKerkues"></div>
                 <div><small><b>Punekerkues</b></small></div>
             </button>
             <button type="button" class="btn text-left">
-                <div><i><?php echo $punedhenesTotal['total']; ?></i></div>
+                <div id="puneDhenes"></div>
                 <div><small><b>Punedhenes</b></small></div>
             </button>
         </div>
